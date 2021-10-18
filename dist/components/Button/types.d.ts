@@ -5,6 +5,7 @@ export declare const scales: {
     readonly MD: "md";
     readonly SM: "sm";
     readonly XS: "xs";
+    readonly XXS: "xxs";
 };
 export declare const variants: {
     readonly PRIMARY: "primary";
@@ -14,6 +15,7 @@ export declare const variants: {
     readonly DANGER: "danger";
     readonly SUBTLE: "subtle";
     readonly SUCCESS: "success";
+    readonly AWESOME: "awesome";
 };
 export declare type Scale = typeof scales[keyof typeof scales];
 export declare type Variant = typeof variants[keyof typeof variants];

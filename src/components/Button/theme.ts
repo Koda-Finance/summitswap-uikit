@@ -3,6 +3,7 @@ import { scales, variants } from "./types";
 export const scaleVariants = {
   [scales.MD]: {
     height: "48px",
+    borderRadius: '33px',
     padding: "0 24px",
   },
   [scales.SM]: {
@@ -10,26 +11,26 @@ export const scaleVariants = {
     padding: "0 16px",
   },
   [scales.XS]: {
+    height: "25px",
+    fontSize: "16px",
+    padding: "15px 23px",
+  },
+  [scales.XXS]: {
     height: "20px",
-    fontSize: "12px",
-    padding: "0 8px",
+    fontSize: "14.4px",
+    padding: "15px 23px",
   },
 };
 
 export const styleVariants = {
   [variants.PRIMARY]: {
-    backgroundColor: "primary",
+    background: "linear-gradient(#00d4a4, #008668)",
+    boxShadow: "0px 0px 15px 1px grey",
     color: "white",
   },
   [variants.SECONDARY]: {
-    backgroundColor: "transparent",
-    border: "2px solid",
-    borderColor: "primary",
-    boxShadow: "none",
-    color: "primary",
-    ":disabled": {
-      backgroundColor: "transparent",
-    },
+    background: "menuItemActiveBackground",
+    color: "white"
   },
   [variants.TERTIARY]: {
     backgroundColor: "tertiary",
@@ -51,6 +52,11 @@ export const styleVariants = {
   [variants.TEXT]: {
     backgroundColor: "transparent",
     color: "primary",
+    boxShadow: "none",
+  },
+  [variants.AWESOME]: {
+    backgroundColor: "menuItemActiveBackground",
+    color: "sidebarColor",
     boxShadow: "none",
   },
 };

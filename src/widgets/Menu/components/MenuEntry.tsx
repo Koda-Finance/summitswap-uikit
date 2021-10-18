@@ -6,6 +6,7 @@ export interface Props {
   secondary?: boolean;
   isActive?: boolean;
   theme: DefaultTheme;
+  isMobile?: boolean;
 }
 
 const rainbowAnimation = keyframes`
@@ -19,9 +20,12 @@ const rainbowAnimation = keyframes`
 `;
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
-  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.primary : "transparent")};
+  margin-left: 10px;
+  color: ${({ theme }) => theme.colors.sidebarColor};
   transition: color 0.4s;
   flex-grow: 1;
+  font-weight: 700;
+  font-size: 16px;
 `;
 
 const MenuEntry = styled.div<Props>`
@@ -29,11 +33,13 @@ const MenuEntry = styled.div<Props>`
   display: flex;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
+  padding-left: ${({ isMobile }) => isMobile ? '5' : '40'}px;
+  // padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.primary};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  color: ${({ isActive, theme }) => isActive ? theme.colors.sidebarActiveColor : theme.colors.sidebarColor};
+  // box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
+  border-bottom: 2px solid rgba(13,39,43,.5);
 
   a {
     display: flex;
@@ -43,11 +49,13 @@ const MenuEntry = styled.div<Props>`
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.sidebarActiveColor};
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    ${LinkLabel} {
+      color: ${({ theme }) => theme.colors.sidebarActiveColor};
+    }
   }
 
   // Safari fix

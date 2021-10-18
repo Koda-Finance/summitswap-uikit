@@ -67,7 +67,7 @@ export const Default: React.FC = () => {
 export const AsLinks: React.FC = () => {
   return (
     <Row>
-      <ButtonMenu activeIndex={0}>
+      <ButtonMenu activeIndex={0} variant='awesome'>
         <ButtonMenuItem as="a" href="https://pancakeswap.finance">
           Link 1
         </ButtonMenuItem>

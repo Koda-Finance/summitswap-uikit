@@ -25,14 +25,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           {accountEllipsis}
         </Button>
       ) : (
-        <Button
-          scale="sm"
-          onClick={() => {
-            onPresentConnectModal();
-          }}
-        >
-          Connect
-        </Button>
+        <Button scale='xxs' style={{height:35}} onClick={() => onPresentConnectModal()}>CONNECT</Button>
       )}
     </div>
   );

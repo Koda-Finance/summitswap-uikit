@@ -1,6 +1,7 @@
 export declare const scaleVariants: {
     md: {
         height: string;
+        borderRadius: string;
         padding: string;
     };
     sm: {
@@ -12,21 +13,21 @@ export declare const scaleVariants: {
         fontSize: string;
         padding: string;
     };
+    xxs: {
+        height: string;
+        fontSize: string;
+        padding: string;
+    };
 };
 export declare const styleVariants: {
     primary: {
-        backgroundColor: string;
+        background: string;
+        boxShadow: string;
         color: string;
     };
     secondary: {
-        backgroundColor: string;
-        border: string;
-        borderColor: string;
-        boxShadow: string;
+        background: string;
         color: string;
-        ":disabled": {
-            backgroundColor: string;
-        };
     };
     tertiary: {
         backgroundColor: string;
@@ -46,6 +47,11 @@ export declare const styleVariants: {
         color: string;
     };
     text: {
+        backgroundColor: string;
+        color: string;
+        boxShadow: string;
+    };
+    awesome: {
         backgroundColor: string;
         color: string;
         boxShadow: string;

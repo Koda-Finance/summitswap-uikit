@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button/Button";
+import Flex from "../../components/Box/Flex";
 import Text from "../../components/Text/Text";
 import { connectorLocalStorageKey } from "./config";
 import { Login, Config } from "./types";
@@ -14,23 +15,26 @@ interface Props {
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
   const { title, icon: Icon } = walletConfig;
   return (
-    <Button
+    <Flex
       width="100%"
-      variant="tertiary"
+      height='40px'
+      borderBottom='1px solid #0d1b24'
       onClick={() => {
         login(walletConfig.connectorId);
         window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
       }}
-      style={{ justifyContent: "space-between" }}
+      justifyContent="space-between"
+      alignItems='center'
       mb={mb}
+      style={{ cursor: 'pointer' }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Text bold color="primary" mr="16px">
+      <Text fontSize='16px' fontWeight='600' color="sidebarColor" mr="16px">
         {title}
       </Text>
       <Icon width="32px" />
-    </Button>
+    </Flex>
   );
 };
 

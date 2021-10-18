@@ -8,14 +8,18 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
+import CashState from "./CashState";
+import { FacebookIcon, DiscordIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "../icons";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PanelProps, PushedProps { }
 
 const Container = styled.div`
-  flex: none;
-  padding: 8px 4px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-top: solid 2px rgba(133, 133, 133, 0.1);
+  position: absolute;
+  bottom: 40px;
+  z-index: 3;
+  flex: 1.3;
+  padding: 35px 10px 0 30px;
+  background-color: transparent;
 `;
 
 const SettingsEntry = styled.div`
@@ -23,15 +27,22 @@ const SettingsEntry = styled.div`
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
 `;
 
 const SocialEntry = styled.div`
+  margin-top: 5px;
+  padding-right: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 16px;
+  justify-content: center;
+  >svg {
+    cursor: pointer;
+    width: 20px; height: 20px;
+    fill: ${({ theme }) => theme.colors.sidebarColor}
+  }
+  >svg+svg {
+    margin-left: 5px;
+  }
 `;
 
 const PanelFooter: React.FC<Props> = ({
@@ -44,26 +55,34 @@ const PanelFooter: React.FC<Props> = ({
   langs,
   setLang,
 }) => {
-  if (!isPushed) {
-    return (
-      <Container>
-        <IconButton variant="text" onClick={() => pushNav(true)}>
-          <CogIcon />
-        </IconButton>
-      </Container>
-    );
-  }
+  // if (!isPushed) {
+  //   return (
+  //     <Container>
+  //       <IconButton variant="text" onClick={() => pushNav(true)}>
+  //         <CogIcon />
+  //       </IconButton>
+  //     </Container>
+  //   );
+  // }
 
   return (
     <Container>
-      <SocialEntry>
+      {/* <SocialEntry>
         <CakePrice cakePriceUsd={cakePriceUsd} />
         <SocialLinks />
-      </SocialEntry>
+      </SocialEntry> */}
       <SettingsEntry>
-        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+        <CashState />
+        {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
         <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
       </SettingsEntry>
+      <SocialEntry>
+        <DiscordIcon />
+        <TelegramIcon />
+        <FacebookIcon />
+        <TwitterIcon />
+        <InstagramIcon />
+      </SocialEntry>
     </Container>
   );
 };
