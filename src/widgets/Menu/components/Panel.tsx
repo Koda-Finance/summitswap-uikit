@@ -67,7 +67,7 @@ const Panel: React.FC<Props> = (props) => {
         <PanelBody {...props} />
         <PanelFooter {...props} />
       </div>
-      <Omni />
+      {/* <Omni /> */}
     </StyledPanel>
   );
 };
