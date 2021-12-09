@@ -25,3 +25,4 @@ export { default as TicketIcon } from "./Ticket";
 export { default as TradeIcon } from "./Trade";
 export { default as TrustScoresIcon } from "./TrustScores";
 export { default as TwitterIcon } from "./Twitter";
+export { default as RubicIcon } from "./Rubic";
