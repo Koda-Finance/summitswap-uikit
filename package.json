@@ -14,15 +14,14 @@
     "build": "del dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir ./dist",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "storybook": "start-storybook -p 6006",
+    "start": "start-storybook",
     "build-storybook": "build-storybook",
     "test": "jest",
     "release": "yarn build && np"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "yarn format"
     }
   },
   "jest": {
