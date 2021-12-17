@@ -12,13 +12,12 @@ import { Login } from "../../WalletModal/types"
 import { MENU_HEIGHT, MENU_HEIGHT_INCREASED } from '../config';
 import { CloseIcon } from '../../..'
 import CashState from './CashState'
-import LangSelector from './LangSelector'
 import { MenuEntry, LinkLabel } from "../components/MenuEntry"
 import MenuLink from "../components/MenuLink"
 import Accordion from "./Accordion"
-import { PanelProps, PushedProps } from "../types"
+import { BasicPanelProps, PushedProps } from "../types"
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends BasicPanelProps, PushedProps {
     open: any;
     setOpen: any;
     account?: string;
@@ -36,9 +35,6 @@ const Topbar: React.FC<Props> = ({
     account,
     login,
     logout,
-    currentLang,
-    langs,
-    setLang,
     pushNav,
     links
 }) => {
@@ -64,7 +60,6 @@ const Topbar: React.FC<Props> = ({
                 <SettingSocial mt='10px' minWidth='85%' flexDirection='column' justifyContent='space-between' alignItems='center'>
                     <SettingsEntry>
                         <CashState />
-                        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
                     </SettingsEntry>
                     <SocialEntry>
                         <DiscordIcon />

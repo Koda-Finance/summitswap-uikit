@@ -4,10 +4,10 @@ import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
-import { PanelProps, PushedProps } from "../types";
+import { BasicPanelProps, PushedProps } from "../types";
 import { Login } from "../../WalletModal/types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends BasicPanelProps, PushedProps {
   showMenu: boolean;
   isMobile: boolean;
   account?: string;

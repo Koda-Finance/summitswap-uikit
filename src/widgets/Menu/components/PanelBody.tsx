@@ -6,9 +6,9 @@ import * as IconModule from "../icons";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
-import { PanelProps, PushedProps } from "../types";
+import { BasicPanelProps, PushedProps } from "../types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends BasicPanelProps, PushedProps {
   isMobile: boolean;
 }
 
