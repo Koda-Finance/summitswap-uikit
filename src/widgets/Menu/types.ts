@@ -38,14 +38,16 @@ export interface MenuEntry {
   initialOpenState?: boolean;
 }
 
-export interface PanelProps {
+export interface BasicPanelProps{
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
   cakePriceUsd?: number;
+  links: Array<MenuEntry>;
+}
+export interface PanelProps extends BasicPanelProps{
   currentLang: string;
   langs: LangType[];
   setLang: (lang: LangType) => void;
-  links: Array<MenuEntry>;
 }
 
 export interface NavProps extends PanelProps {

@@ -1,17 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { CogIcon } from "../../../components/Svg";
-import IconButton from "../../../components/Button/IconButton";
 import { MENU_ENTRY_HEIGHT } from "../config";
-import { PanelProps, PushedProps } from "../types";
-import CakePrice from "./CakePrice";
-import ThemeSwitcher from "./ThemeSwitcher";
-import SocialLinks from "./SocialLinks";
-import LangSelector from "./LangSelector";
+import { BasicPanelProps, PushedProps } from "../types";
 import CashState from "./CashState";
 import { FacebookIcon, DiscordIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "../icons";
 
-interface Props extends PanelProps, PushedProps { }
+interface Props extends BasicPanelProps, PushedProps { }
 
 const Container = styled.div`
   position: absolute;
@@ -50,10 +44,7 @@ const PanelFooter: React.FC<Props> = ({
   pushNav,
   toggleTheme,
   isDark,
-  cakePriceUsd,
-  currentLang,
-  langs,
-  setLang,
+  cakePriceUsd
 }) => {
   // if (!isPushed) {
   //   return (
@@ -73,7 +64,6 @@ const PanelFooter: React.FC<Props> = ({
       </SocialEntry> */}
       <SettingsEntry>
         <CashState />
-        {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
       </SettingsEntry>
       <SocialEntry>
         <DiscordIcon />
