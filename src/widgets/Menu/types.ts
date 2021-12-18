@@ -50,7 +50,7 @@ export interface PanelProps extends BasicPanelProps{
   setLang: (lang: LangType) => void;
 }
 
-export interface NavProps extends PanelProps {
+export interface NavProps extends BasicPanelProps {
   account?: string;
   login: Login;
   profile?: Profile;
