@@ -74,7 +74,9 @@ const PanelFooter: React.FC<Props> = ({
       <SettingsEntry>
         <CashState />
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
-        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
+        {(currentLang && langs?.length && setLang) ? 
+        (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null}  
+       
       </SettingsEntry>
       <SocialEntry>
         <DiscordIcon />
