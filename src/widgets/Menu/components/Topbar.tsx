@@ -96,7 +96,7 @@ const Topbar: React.FC<Props> = ({
                                     isActive={entry.items.some((item: any) => item.href === location.pathname)}
                                 >
                                     {entry.items.map((item: any) =>
-                                        <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={() => alert()}>
+                                        <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={() => setOpen(false)}>
                                             <MenuLink href={item.href}>{item.label}</MenuLink>
                                         </MenuEntry>
                                     )}
@@ -104,7 +104,7 @@ const Topbar: React.FC<Props> = ({
                             );
                         }
                         return (
-                            <MenuEntry isMobile key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+                            <MenuEntry isMobile key={entry.label} isActive={entry.href === location.pathname} className={calloutClass} onClick={() => setOpen(false)}>
                                 <MenuLink href={entry.href}>
                                     {iconElement}
                                     <LinkLabel isPushed={true}>{entry.label}</LinkLabel>
