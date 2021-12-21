@@ -2644,7 +2644,8 @@ var PanelFooter = function (_a) {
     return (React.createElement(Container$4, null,
         React.createElement(SettingsEntry, null,
             React.createElement(CashState, null),
-            React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })),
+            (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
+                (React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
         React.createElement(SocialEntry, null,
             React.createElement(Icon$Y, null),
             React.createElement(Icon$1e, null),
@@ -2712,7 +2713,8 @@ var Topbar = function (_a) {
             React.createElement(SettingSocial, { mt: '10px', minWidth: '85%', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' },
                 React.createElement(SettingsEntry$1, null,
                     React.createElement(CashState, null),
-                    React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })),
+                    (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
+                        (React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
                 React.createElement(SocialEntry$1, null,
                     React.createElement(Icon$Y, null),
                     React.createElement(Icon$1e, null),

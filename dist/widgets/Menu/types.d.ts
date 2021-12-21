@@ -35,9 +35,9 @@ export interface PanelProps {
     isDark: boolean;
     toggleTheme: (isDark: boolean) => void;
     cakePriceUsd?: number;
-    currentLang: string;
-    langs: LangType[];
-    setLang: (lang: LangType) => void;
+    currentLang?: string;
+    langs?: LangType[];
+    setLang?: (lang: LangType) => void;
     links: Array<MenuEntry>;
 }
 export interface NavProps extends PanelProps {

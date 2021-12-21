@@ -2657,7 +2657,8 @@ var PanelFooter = function (_a) {
     return (React__default['default'].createElement(Container$4, null,
         React__default['default'].createElement(SettingsEntry, null,
             React__default['default'].createElement(CashState, null),
-            React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })),
+            (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
+                (React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
         React__default['default'].createElement(SocialEntry, null,
             React__default['default'].createElement(Icon$Y, null),
             React__default['default'].createElement(Icon$1e, null),
@@ -2725,7 +2726,8 @@ var Topbar = function (_a) {
             React__default['default'].createElement(SettingSocial, { mt: '10px', minWidth: '85%', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' },
                 React__default['default'].createElement(SettingsEntry$1, null,
                     React__default['default'].createElement(CashState, null),
-                    React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })),
+                    (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
+                        (React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
                 React__default['default'].createElement(SocialEntry$1, null,
                     React__default['default'].createElement(Icon$Y, null),
                     React__default['default'].createElement(Icon$1e, null),
