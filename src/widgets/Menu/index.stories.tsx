@@ -8,6 +8,7 @@ import { MenuEntry } from "./components/MenuEntry";
 import Menu from "./Menu";
 import { LangType } from "./types";
 import { links } from "./config";
+import { isUndefined } from "lodash";
 
 export default {
   title: "Widgets/Menu",
@@ -211,6 +212,8 @@ export const WithNoLanguage: React.FC = () => {
         isDark={false}
         toggleTheme={noop}
         cakePriceUsd={0.23158668932877668}
+        setLang={(): void => undefined}
+        currentLang=''
         langs={[]}
         links={links}
         profile={{
