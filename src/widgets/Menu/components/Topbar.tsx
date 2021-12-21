@@ -64,7 +64,8 @@ const Topbar: React.FC<Props> = ({
                 <SettingSocial mt='10px' minWidth='85%' flexDirection='column' justifyContent='space-between' alignItems='center'>
                     <SettingsEntry>
                         <CashState />
-                        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
+                        {(currentLang && langs?.length && setLang) ? 
+                            (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null} 
                     </SettingsEntry>
                     <SocialEntry>
                         <DiscordIcon />

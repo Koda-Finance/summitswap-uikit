@@ -201,7 +201,49 @@ export const WithProfile: React.FC = () => {
     </BrowserRouter>
   );
 };
-
+export const WithNoLanguage: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Menu
+        account="0xbdda50183d817c3289f895a4472eb475967dc980"
+        login={noop}
+        logout={noop}
+        isDark={false}
+        toggleTheme={noop}
+        cakePriceUsd={0.23158668932877668}
+        setLang={(): void => undefined}
+        currentLang=''
+        langs={[]}
+        links={links}
+        profile={{
+          username: "pancakeswap",
+          image: "https://pancakeswap.finance/images/nfts/blueberries-preview.png",
+          profileLink: "/profile",
+          noProfileLink: "/no-profile",
+        }}
+      >
+        <div>
+          <Heading as="h1" mb="8px">
+            Page body
+          </Heading>
+          <Text as="p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut
+          </Text>
+        </div>
+      </Menu>
+    </BrowserRouter>
+  );
+};
 export const MenuEntryComponent: React.FC = () => {
   return (
     <Flex justifyContent="space-between" p="16px" style={{ backgroundColor: "wheat" }}>
