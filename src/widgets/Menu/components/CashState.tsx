@@ -1,17 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Box } from '../../../components/Box'
+import Skeleton from "../../../components/Skeleton/Skeleton"
 
 interface Props {
-
+    kodaPriceUsd?: number;
 }
 
-const CashState: React.FC<Props> = () => {
-    return (
+const CashState: React.FC<Props> = ({kodaPriceUsd}) => {
+    return kodaPriceUsd ? (
         <StyledContainer>
             <LogoIcon />
-            <Box>$0.000</Box>
+            <Box>{`$${kodaPriceUsd.toFixed(3)}`}</Box>
         </StyledContainer>
+    ) : (
+        <Skeleton width={80} height={24} />
     )
 }
 

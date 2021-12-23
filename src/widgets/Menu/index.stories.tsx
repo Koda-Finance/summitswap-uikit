@@ -29,6 +29,7 @@ const useProps = () => {
     setLang: noop,
     currentLang: "EN",
     cakePriceUsd: 0.023158668932877668,
+    kodaPriceUsd: 0,
     links,
     profile: null,
   });
@@ -45,6 +46,7 @@ const useProps = () => {
         setLang: noop,
         currentLang: "EN",
         cakePriceUsd: 0.023158668932877668,
+        kodaPriceUsd: 0.023158668932877668,
         links,
         profile: null,
       });
@@ -129,6 +131,7 @@ export const WithNoProfile: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           profileLink: "/profile",
@@ -171,6 +174,7 @@ export const WithProfile: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           username: "pancakeswap",
@@ -211,6 +215,7 @@ export const WithNoLanguage: React.FC = () => {
         isDark={false}
         toggleTheme={noop}
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.23158668932877668}
         setLang={(): void => undefined}
         currentLang=''
         langs={[]}
@@ -267,6 +272,7 @@ export const WithSubmenuSelected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           username: "pancakeswap",

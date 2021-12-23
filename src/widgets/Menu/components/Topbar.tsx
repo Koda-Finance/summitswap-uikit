@@ -36,6 +36,7 @@ const Topbar: React.FC<Props> = ({
     account,
     login,
     logout,
+    kodaPriceUsd,
     currentLang,
     langs,
     setLang,
@@ -63,7 +64,7 @@ const Topbar: React.FC<Props> = ({
                 </Flex>
                 <SettingSocial mt='10px' minWidth='85%' flexDirection='column' justifyContent='space-between' alignItems='center'>
                     <SettingsEntry>
-                        <CashState />
+                        <CashState kodaPriceUsd={kodaPriceUsd} />
                         {(currentLang && langs?.length && setLang) ? 
                             (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null} 
                     </SettingsEntry>

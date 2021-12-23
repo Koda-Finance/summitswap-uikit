@@ -36,6 +36,7 @@ it("renders correctly", () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.23158668932877668}
         links={menuConfig}
       >
         body
