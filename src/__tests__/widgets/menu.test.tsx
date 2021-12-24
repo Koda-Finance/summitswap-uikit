@@ -21,7 +21,10 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const langs: LangType[] = [...Array(20)].map((_, i) => ({
+  code: `en${i}`,
+  language: `English${i}`,
+}));
 
 it("renders correctly", () => {
   const { asFragment } = renderWithTheme(
@@ -34,8 +37,9 @@ it("renders correctly", () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
-        currentLang="EN"
+        currentLang=""
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.00091815}
         links={menuConfig}
       >
         body

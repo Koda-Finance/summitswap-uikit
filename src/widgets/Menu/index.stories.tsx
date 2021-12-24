@@ -27,8 +27,9 @@ const useProps = () => {
     toggleTheme: noop,
     langs,
     setLang: noop,
-    currentLang: "EN",
+    currentLang: null,
     cakePriceUsd: 0.023158668932877668,
+    kodaPriceUsd: 0,
     links,
     profile: null,
   });
@@ -43,8 +44,9 @@ const useProps = () => {
         toggleTheme: noop,
         langs,
         setLang: noop,
-        currentLang: "EN",
+        currentLang: null,
         cakePriceUsd: 0.023158668932877668,
+        kodaPriceUsd: 0.00091815,
         links,
         profile: null,
       });
@@ -96,7 +98,8 @@ export const NotConnected: React.FC = () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
-        currentLang="EN"
+        currentLang=""
+        kodaPriceUsd={0.00091815}
         links={links}
       >
         <div>
@@ -127,8 +130,9 @@ export const WithNoProfile: React.FC = () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
-        currentLang="EN"
+        currentLang=""
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.00091815}
         links={links}
         profile={{
           profileLink: "/profile",
@@ -169,8 +173,9 @@ export const WithProfile: React.FC = () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
-        currentLang="EN"
+        currentLang=""
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.00091815}
         links={links}
         profile={{
           username: "pancakeswap",
@@ -211,6 +216,7 @@ export const WithNoLanguage: React.FC = () => {
         isDark={false}
         toggleTheme={noop}
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.00091815}
         setLang={(): void => undefined}
         currentLang=''
         langs={[]}
@@ -265,8 +271,9 @@ export const WithSubmenuSelected: React.FC = () => {
         toggleTheme={noop}
         langs={langs}
         setLang={noop}
-        currentLang="EN"
+        currentLang=""
         cakePriceUsd={0.23158668932877668}
+        kodaPriceUsd={0.00091815}
         links={links}
         profile={{
           username: "pancakeswap",
