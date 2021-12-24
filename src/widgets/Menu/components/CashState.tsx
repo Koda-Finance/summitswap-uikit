@@ -8,13 +8,15 @@ interface Props {
 }
 
 const CashState: React.FC<Props> = ({kodaPriceUsd}) => {
-    return kodaPriceUsd ? (
+    return (
         <StyledContainer>
             <LogoIcon />
-            <Box>{`$${kodaPriceUsd.toFixed(3)}`}</Box>
+            {kodaPriceUsd ? (
+                <Box>{`$${kodaPriceUsd}`}</Box>
+            ) : (
+                <Skeleton width={100} height={24} />
+            )}
         </StyledContainer>
-    ) : (
-        <Skeleton width={80} height={24} />
     )
 }
 
