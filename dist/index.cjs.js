@@ -2727,7 +2727,7 @@ var Panel = function (props) {
     return (React__default['default'].createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React__default['default'].createElement(BoldV, null),
         React__default['default'].createElement(PanelHeader, { account: account, login: login, logout: logout }),
-        React__default['default'].createElement("div", { style: { position: 'relative', height: '100%' } },
+        React__default['default'].createElement("div", { style: { position: "relative", height: "100%" } },
             React__default['default'].createElement(PanelBody, __assign({}, props)),
             React__default['default'].createElement(PanelFooter, __assign({}, props)))));
 };

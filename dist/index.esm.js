@@ -2714,7 +2714,7 @@ var Panel = function (props) {
     return (React.createElement(StyledPanel, { isPushed: isPushed, showMenu: showMenu },
         React.createElement(BoldV, null),
         React.createElement(PanelHeader, { account: account, login: login, logout: logout }),
-        React.createElement("div", { style: { position: 'relative', height: '100%' } },
+        React.createElement("div", { style: { position: "relative", height: "100%" } },
             React.createElement(PanelBody, __assign({}, props)),
             React.createElement(PanelFooter, __assign({}, props)))));
 };

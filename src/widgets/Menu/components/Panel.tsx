@@ -64,7 +64,7 @@ const Panel: React.FC<Props> = (props) => {
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <BoldV />
       <PanelHeader account={account} login={login} logout={logout} />
-      <div style={{ position: 'relative', height: '100%' }}>
+      <div style={{ position: "relative", height: "100%" }}>
         <PanelBody {...props} />
         <PanelFooter {...props} />
       </div>
