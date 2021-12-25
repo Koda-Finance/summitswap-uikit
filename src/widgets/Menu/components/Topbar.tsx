@@ -32,6 +32,7 @@ interface Props extends PanelProps, PushedProps {
   logout: () => void;
   showMenu?: any;
   isMobile: boolean;
+  showConnect: boolean;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
@@ -49,15 +50,16 @@ const Topbar: React.FC<Props> = ({
   setLang,
   pushNav,
   links,
+  showConnect,
 }) => {
   return (
     <Flex flexDirection="column">
       <StyledNav showMenu={showMenu} open={open}>
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
           <Logo />
-          <ConnectAction justifyContent="flex-end" alignItems="center">
+          {showConnect&&<ConnectAction justifyContent="flex-end" alignItems="center">
             <UserBlock account={account} login={login} logout={logout} />
-            {/* {!open ? (
+            {!open ? (
               <HamburgerIcon
                 ml="5px"
                 width="35px"
@@ -75,9 +77,9 @@ const Topbar: React.FC<Props> = ({
                 cursor="pointer"
                 onClick={() => setOpen(false)}
               />
-            )} */}
+            )}
             {/* {profile && <Avatar profile={profile} />} */}
-          </ConnectAction>
+          </ConnectAction>}
         </Flex>
         <SettingSocial
           mt="10px"

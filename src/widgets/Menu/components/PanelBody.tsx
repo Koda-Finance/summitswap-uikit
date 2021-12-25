@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Dispatch, SetStateAction} from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { SvgProps } from "../../../components/Svg";
@@ -10,6 +10,7 @@ import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
+  setShowConnect: Dispatch<SetStateAction<boolean>>;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
@@ -28,11 +29,14 @@ const Container = styled.div`
   }
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, setShowConnect }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
-  const handleClick = isMobile ? () => pushNav(false) : undefined;
+  const handleClick = (item: any)=>{
+    isMobile ? () => pushNav(false) : undefined;
+    setShowConnect(item.isShowConnect);
+  }
 
   return (
     <Container>
@@ -71,7 +75,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
                     key={item.href}
                     secondary
                     isActive={item.href === location.pathname}
-                    onClick={handleClick}
+                    onClick={() => handleClick(item)}
                   >
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>

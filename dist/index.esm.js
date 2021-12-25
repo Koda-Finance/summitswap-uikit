@@ -2605,10 +2605,12 @@ var MenuLink = function (_a) {
 var Icons = IconModule;
 var Container$3 = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  z-index: 3;\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  // flex: 2;\n  &::-webkit-scrollbar-thumb {\n    background: transparent;\n  }\n  &::-webkit-scrollbar-track {\n    box-shadow: none;\n  }\n"], ["\n  z-index: 3;\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  // flex: 2;\n  &::-webkit-scrollbar-thumb {\n    background: transparent;\n  }\n  &::-webkit-scrollbar-track {\n    box-shadow: none;\n  }\n"])));
 var PanelBody = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.isMobile; var links = _a.links, setShowConnect = _a.setShowConnect;
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
-    var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
+    var handleClick = function (item) {
+        setShowConnect(item.isShowConnect);
+    };
     return (React.createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
@@ -2621,7 +2623,7 @@ var PanelBody = function (_a) {
                 ? entry.initialOpenState
                 : itemsMatchIndex >= 0;
             return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, isActive: entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
-                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
+                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: function () { return handleClick(item); } },
                     React.createElement(MenuLink, { href: item.href }, item.label))); })));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
@@ -2743,13 +2745,14 @@ var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links, showConnect = _a.showConnect;
     return (React.createElement(Flex, { flexDirection: "column" },
         React.createElement(StyledNav, { showMenu: showMenu, open: open },
             React.createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(Logo$3, null),
-                React.createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
-                    React.createElement(UserBlock$1, { account: account, login: login, logout: logout }))),
+                showConnect && React.createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
+                    React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                    !open ? (React.createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React.createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } })))),
             React.createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(SettingsEntry$1, null,
                     React.createElement(CashState, { kodaPriceUsd: kodaPriceUsd }),
@@ -2827,7 +2830,8 @@ var Menu = function (_a) {
     var isMobile = isXl === false;
     var _b = useState(!isMobile), isPushed = _b[0], setIsPushed = _b[1];
     var _c = useState(true), showMenu = _c[0], setShowMenu = _c[1];
-    var _d = useState(false), open = _d[0], setOpen = _d[1];
+    var _d = useState(true), showConnect = _d[0], setShowConnect = _d[1];
+    var _e = useState(false), open = _e[0], setOpen = _e[1];
     var refPrevOffset = useRef(window.pageYOffset);
     useEffect(function () {
         var handleScroll = function () {
@@ -2861,9 +2865,9 @@ var Menu = function (_a) {
     // Find the home link if provided
     links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,
-        isMobile && (React.createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links })),
+        isMobile && (React.createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnect: showConnect })),
         React.createElement(BodyWrapper, null,
-            React.createElement(Panel, { account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links }),
+            React.createElement(Panel, { account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, setShowConnect: setShowConnect }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children))));
 };
 var templateObject_1$L, templateObject_2$j, templateObject_3$a, templateObject_4$5;

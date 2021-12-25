@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Dispatch, SetStateAction} from "react";
 import styled from "styled-components";
 import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
@@ -13,6 +13,7 @@ interface Props extends PanelProps, PushedProps {
   account?: string;
   login: Login;
   logout: () => void;
+  setShowConnect: Dispatch<SetStateAction<boolean>>;
 }
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
