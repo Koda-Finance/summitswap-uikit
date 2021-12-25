@@ -16,7 +16,7 @@ export const baseColors = {
   menuItemActiveBackground: "#008b74",
   inputColor: "#284859",
   dropdownBackground: "#00121d",
-  linkColor: "#00d4a4"
+  linkColor: "#00d4a4",
 };
 
 export const brandColors = {

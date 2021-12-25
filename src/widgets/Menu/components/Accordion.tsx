@@ -21,11 +21,16 @@ const Container = styled.div`
   flex-shrink: 0;
 `;
 
-const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHeight: number }>`
+const AccordionContent = styled.div<{
+  isOpen: boolean;
+  isPushed: boolean;
+  maxHeight: number;
+}>`
   max-height: ${({ isOpen, maxHeight }) => (isOpen ? `${maxHeight}px` : 0)};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
-  border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
+  border-color: ${({ isOpen, isPushed }) =>
+    isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent"};
   border-style: solid;
   border-width: 1px 0;
 `;
@@ -53,7 +58,11 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <Container>
-      <MenuEntry onClick={handleClick} className={className} isActive={isActive}>
+      <MenuEntry
+        onClick={handleClick}
+        className={className}
+        isActive={isActive}
+      >
         {icon}
         <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
         {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
@@ -69,4 +78,7 @@ const Accordion: React.FC<Props> = ({
   );
 };
 
-export default React.memo(Accordion, (prev, next) => prev.isPushed === next.isPushed);
+export default React.memo(
+  Accordion,
+  (prev, next) => prev.isPushed === next.isPushed
+);

@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
-import { BaseButtonProps, PolymorphicComponent, variants } from "../Button/types";
+import {
+  BaseButtonProps,
+  PolymorphicComponent,
+  variants,
+} from "../Button/types";
 import { ButtonMenuItemProps } from "./types";
 
 interface InactiveButtonProps extends BaseButtonProps {
@@ -9,7 +13,10 @@ interface InactiveButtonProps extends BaseButtonProps {
   colorKey: "primary" | "textSubtle" | "sidebarColor";
 }
 
-const InactiveButton: PolymorphicComponent<InactiveButtonProps, "button"> = styled(Button)<InactiveButtonProps>`
+const InactiveButton: PolymorphicComponent<
+  InactiveButtonProps,
+  "button"
+> = styled(Button)<InactiveButtonProps>`
   background-color: transparent;
   color: ${({ theme, colorKey }) => theme.colors[colorKey]};
   &:hover:not(:disabled):not(:active) {

@@ -9,9 +9,15 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
 import CashState from "./CashState";
-import { FacebookIcon, DiscordIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "../icons";
+import {
+  FacebookIcon,
+  DiscordIcon,
+  InstagramIcon,
+  TelegramIcon,
+  TwitterIcon,
+} from "../icons";
 
-interface Props extends PanelProps, PushedProps { }
+interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   position: absolute;
@@ -35,12 +41,13 @@ const SocialEntry = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  >svg {
+  > svg {
     cursor: pointer;
-    width: 20px; height: 20px;
-    fill: ${({ theme }) => theme.colors.sidebarColor}
+    width: 20px;
+    height: 20px;
+    fill: ${({ theme }) => theme.colors.sidebarColor};
   }
-  >svg+svg {
+  > svg + svg {
     margin-left: 5px;
   }
 `;
@@ -75,8 +82,13 @@ const PanelFooter: React.FC<Props> = ({
       <SettingsEntry>
         <CashState kodaPriceUsd={kodaPriceUsd} />
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
-        {(currentLang && langs?.length && setLang) ? 
-              (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null}  
+        {currentLang && langs?.length && setLang ? (
+          <LangSelector
+            currentLang={currentLang}
+            langs={langs}
+            setLang={setLang}
+          />
+        ) : null}
       </SettingsEntry>
       <SocialEntry>
         <DiscordIcon />

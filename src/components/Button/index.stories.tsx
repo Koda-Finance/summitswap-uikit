@@ -83,10 +83,22 @@ export const Anchors: React.FC = () => {
         })}
       </Box>
       <Box>
-        <Button as="a" href="https://pancakeswap.finance" mr="8px" external disabled>
+        <Button
+          as="a"
+          href="https://pancakeswap.finance"
+          mr="8px"
+          external
+          disabled
+        >
           Disabled
         </Button>
-        <Button as="a" href="https://pancakeswap.finance" variant="secondary" external disabled>
+        <Button
+          as="a"
+          href="https://pancakeswap.finance"
+          variant="secondary"
+          external
+          disabled
+        >
           Disabled
         </Button>
       </Box>
@@ -107,7 +119,10 @@ export const Variants: React.FC = () => {
           <Button width="100%">Full size</Button>
         </Row>
         <Row>
-          <Button isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
+          <Button
+            isLoading
+            endIcon={<AutoRenewIcon spin color="currentColor" />}
+          >
             Approving
           </Button>
           <Button isLoading variant="success">

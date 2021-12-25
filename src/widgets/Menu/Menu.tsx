@@ -6,7 +6,11 @@ import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
 import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import {
+  MENU_HEIGHT,
+  SIDEBAR_WIDTH_REDUCED,
+  SIDEBAR_WIDTH_FULL,
+} from "./config";
 import Topbar from "./components/Topbar";
 
 const Wrapper = styled.div`
@@ -60,13 +64,15 @@ const Menu: React.FC<NavProps> = ({
   const isMobile = isXl === false;
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const refPrevOffset = useRef(window.pageYOffset);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentOffset = window.pageYOffset;
-      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+      const isBottomOfPage =
+        window.document.body.clientHeight ===
+        currentOffset + window.innerHeight;
       const isTopOfPage = currentOffset === 0;
       // Always show the menu when user reach the top
       if (isTopOfPage) {
@@ -97,10 +103,13 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      {isMobile &&
+      {isMobile && (
         <Topbar
-          open={open} setOpen={setOpen}
-          account={account} login={login} logout={logout}
+          open={open}
+          setOpen={setOpen}
+          account={account}
+          login={login}
+          logout={logout}
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}
@@ -114,10 +123,12 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
         />
-      }
+      )}
       <BodyWrapper>
         <Panel
-          account={account} login={login} logout={logout}
+          account={account}
+          login={login}
+          logout={logout}
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}

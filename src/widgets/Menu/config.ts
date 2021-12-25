@@ -89,7 +89,7 @@ export const socials = [
   },
 ];
 
-export const MENU_HEIGHT_INCREASED = 135
+export const MENU_HEIGHT_INCREASED = 135;
 export const MENU_HEIGHT = 85;
 export const MENU_ENTRY_HEIGHT = 43;
 export const SIDEBAR_WIDTH_FULL = 240;

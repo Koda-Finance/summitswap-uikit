@@ -16,7 +16,12 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
         fill={textColor}
       />
       <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <pattern
+          id="pattern0"
+          patternContentUnits="objectBoundingBox"
+          width="1"
+          height="1"
+        >
           <use xlinkHref="#image0" transform="scale(0.00161551 0.00277778)" />
         </pattern>
         <image

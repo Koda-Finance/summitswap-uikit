@@ -6,7 +6,7 @@ export const scales = {
   MD: "md",
   SM: "sm",
   XS: "xs",
-  XXS: "xxs"
+  XXS: "xxs",
 } as const;
 
 export const variants = {
@@ -17,7 +17,7 @@ export const variants = {
   DANGER: "danger",
   SUBTLE: "subtle",
   SUCCESS: "success",
-  AWESOME: "awesome"
+  AWESOME: "awesome",
 } as const;
 
 export type Scale = typeof scales[keyof typeof scales];
@@ -30,11 +30,15 @@ export type AsProps<E extends ElementType = ElementType> = {
   as?: E;
 };
 
-export type MergeProps<E extends ElementType> = AsProps<E> & Omit<ComponentProps<E>, keyof AsProps>;
+export type MergeProps<E extends ElementType> = AsProps<E> &
+  Omit<ComponentProps<E>, keyof AsProps>;
 
-export type PolymorphicComponentProps<E extends ElementType, P> = P & MergeProps<E>;
+export type PolymorphicComponentProps<E extends ElementType, P> = P &
+  MergeProps<E>;
 
-export type PolymorphicComponent<P, D extends ElementType = "button"> = <E extends ElementType = D>(
+export type PolymorphicComponent<P, D extends ElementType = "button"> = <
+  E extends ElementType = D
+>(
   props: PolymorphicComponentProps<E, P>
 ) => ReactElement | null;
 
@@ -49,4 +53,6 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   endIcon?: ReactNode;
 }
 
-export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;
+export type ButtonProps<
+  P extends ElementType = "button"
+> = PolymorphicComponentProps<P, BaseButtonProps>;

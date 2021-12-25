@@ -5,7 +5,10 @@ export interface ButtonMenuItemProps extends BaseButtonProps {
 }
 
 export interface ButtonMenuProps {
-  variant?: typeof variants.PRIMARY | typeof variants.SUBTLE | typeof variants.AWESOME;
+  variant?:
+    | typeof variants.PRIMARY
+    | typeof variants.SUBTLE
+    | typeof variants.AWESOME;
   activeIndex?: number;
   onItemClick?: (index: number) => void;
   scale?: Scale;

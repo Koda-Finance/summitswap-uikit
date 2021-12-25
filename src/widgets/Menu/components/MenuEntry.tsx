@@ -33,13 +33,16 @@ const MenuEntry = styled.div<Props>`
   display: flex;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding-left: ${({ isMobile }) => isMobile ? '5' : '40'}px;
+  padding-left: ${({ isMobile }) => (isMobile ? "5" : "40")}px;
   // padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ isActive, theme }) => isActive ? theme.colors.sidebarActiveColor : theme.colors.sidebarColor};
-  // box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
-  border-bottom: 2px solid rgba(13,39,43,.5);
+  background-color: ${({ secondary, theme }) =>
+    secondary ? theme.colors.background : "transparent"};
+  color: ${({ isActive, theme }) =>
+    isActive ? theme.colors.sidebarActiveColor : theme.colors.sidebarColor};
+  // box-shadow: ${({ isActive, theme }) =>
+    isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none"};
+  border-bottom: 2px solid rgba(13, 39, 43, 0.5);
 
   a {
     display: flex;
@@ -74,6 +77,9 @@ MenuEntry.defaultProps = {
   role: "button",
 };
 
-const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
+const LinkLabelMemo = React.memo(
+  LinkLabel,
+  (prev, next) => prev.isPushed === next.isPushed
+);
 
 export { MenuEntry, LinkLabelMemo as LinkLabel };

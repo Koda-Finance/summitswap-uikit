@@ -20,7 +20,10 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => (
   <Dropdown
     position="top-right"
     target={
-      <Button variant="text" startIcon={<LanguageIcon color="sidebarColor" width="24px" />}>
+      <Button
+        variant="text"
+        startIcon={<LanguageIcon color="sidebarColor" width="24px" />}
+      >
         <Text color="sidebarColor">{currentLang?.toUpperCase()}</Text>
       </Button>
     }
@@ -39,4 +42,7 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => (
   </Dropdown>
 );
 
-export default React.memo(LangSelector, (prev, next) => prev.currentLang === next.currentLang);
+export default React.memo(
+  LangSelector,
+  (prev, next) => prev.currentLang === next.currentLang
+);

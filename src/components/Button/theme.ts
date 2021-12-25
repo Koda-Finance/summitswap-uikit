@@ -3,7 +3,7 @@ import { scales, variants } from "./types";
 export const scaleVariants = {
   [scales.MD]: {
     height: "48px",
-    borderRadius: '33px',
+    borderRadius: "33px",
     padding: "0 24px",
   },
   [scales.SM]: {
@@ -30,7 +30,7 @@ export const styleVariants = {
   },
   [variants.SECONDARY]: {
     background: "menuItemActiveBackground",
-    color: "white"
+    color: "white",
   },
   [variants.TERTIARY]: {
     backgroundColor: "tertiary",
