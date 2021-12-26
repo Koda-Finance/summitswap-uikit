@@ -9,7 +9,6 @@ interface Props extends PanelProps, PushedProps {
     logout: () => void;
     showMenu?: any;
     isMobile: boolean;
-    showConnect: boolean;
 }
 declare const Topbar: React.FC<Props>;
 export default Topbar;

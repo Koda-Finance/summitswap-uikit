@@ -2622,7 +2622,6 @@ var PanelBody = function (_a) {
     var location = reactRouterDom.useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = function (isShowConnect) {
-        console.log("bhai jaan i am here", isShowConnect, "ok");
         setShowConnect(isShowConnect);
     };
     return (React__default['default'].createElement(Container$3, null, links.map(function (entry) {
@@ -2756,16 +2755,20 @@ var UserBlock = function (_a) {
             onPresentAccountModal();
         } }, accountEllipsis)) : (React__default['default'].createElement(Button, { scale: "xxs", style: { height: 35 }, onClick: function () { return onPresentConnectModal(); } }, "CONNECT"))));
 };
-React__default['default'].memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
+var UserBlock$1 = React__default['default'].memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu; _a.account; _a.login; _a.logout; var kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links; _a.showConnect;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links;
     return (React__default['default'].createElement(Flex, { flexDirection: "column" },
         React__default['default'].createElement(StyledNav, { showMenu: showMenu, open: open },
             React__default['default'].createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React__default['default'].createElement(Logo$3, null),
-                false ),
+                "(",
+                React__default['default'].createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
+                    React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                    !open ? (React__default['default'].createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React__default['default'].createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } }))),
+                ")"),
             React__default['default'].createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React__default['default'].createElement(SettingsEntry$1, null,
                     React__default['default'].createElement(CashState, { kodaPriceUsd: kodaPriceUsd }),
@@ -2807,7 +2810,7 @@ var SocialEntry$1 = styled__default['default'].div(templateObject_6 || (template
     var theme = _a.theme;
     return theme.colors.sidebarColor;
 });
-styled__default['default'](Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
+var ConnectAction = styled__default['default'](Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
 var StyledNav = styled__default['default'].nav(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ", " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"], ["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ",
     " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"])), function (_a) {
     var open = _a.open;
@@ -2878,7 +2881,7 @@ var Menu = function (_a) {
     // Find the home link if provided
     links.find(function (link) { return link.label === "Home"; });
     return (React__default['default'].createElement(Wrapper$1, null,
-        isMobile && (React__default['default'].createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnect: showConnect })),
+        isMobile && (React__default['default'].createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links })),
         React__default['default'].createElement(BodyWrapper, null,
             React__default['default'].createElement(Panel, { account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, setShowConnect: setShowConnect, showConnect: showConnect }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children))));

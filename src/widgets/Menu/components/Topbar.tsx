@@ -32,7 +32,6 @@ interface Props extends PanelProps, PushedProps {
   logout: () => void;
   showMenu?: any;
   isMobile: boolean;
-  showConnect: boolean;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
@@ -50,38 +49,36 @@ const Topbar: React.FC<Props> = ({
   setLang,
   pushNav,
   links,
-  showConnect,
 }) => {
   return (
     <Flex flexDirection="column">
       <StyledNav showMenu={showMenu} open={open}>
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
-          <Logo />
-          {false && (
-            <ConnectAction justifyContent="flex-end" alignItems="center">
-              <UserBlock account={account} login={login} logout={logout} />
-              {!open ? (
-                <HamburgerIcon
-                  ml="5px"
-                  width="35px"
-                  height="40px"
-                  color="sidebarColor"
-                  cursor="pointer"
-                  onClick={() => setOpen(true)}
-                />
-              ) : (
-                <CloseIcon
-                  ml="5px"
-                  width="35px"
-                  height="40px"
-                  color="sidebarColor"
-                  cursor="pointer"
-                  onClick={() => setOpen(false)}
-                />
-              )}
-              {/* {profile && <Avatar profile={profile} />} */}
-            </ConnectAction>
-          )}
+          <Logo />(
+          <ConnectAction justifyContent="flex-end" alignItems="center">
+            <UserBlock account={account} login={login} logout={logout} />
+            {!open ? (
+              <HamburgerIcon
+                ml="5px"
+                width="35px"
+                height="40px"
+                color="sidebarColor"
+                cursor="pointer"
+                onClick={() => setOpen(true)}
+              />
+            ) : (
+              <CloseIcon
+                ml="5px"
+                width="35px"
+                height="40px"
+                color="sidebarColor"
+                cursor="pointer"
+                onClick={() => setOpen(false)}
+              />
+            )}
+            {/* {profile && <Avatar profile={profile} />} */}
+          </ConnectAction>
+          )
         </Flex>
         <SettingSocial
           mt="10px"

@@ -40,7 +40,6 @@ const PanelBody: React.FC<Props> = ({
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = (isShowConnect: boolean) => {
-    console.log("bhai jaan i am here", isShowConnect, "ok");
     setShowConnect(isShowConnect);
     isMobile ? () => pushNav(false) : undefined;
   };
