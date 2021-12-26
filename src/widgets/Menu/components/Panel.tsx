@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
@@ -66,8 +66,8 @@ const Panel: React.FC<Props> = (props) => {
       <BoldV />
       <PanelHeader account={account} login={login} logout={logout} />
       <div style={{ position: "relative", height: "100%" }}>
-        <PanelBody {...props} />
-        <PanelFooter {...props} />
+        {/* <PanelBody {...props} />
+        <PanelFooter {...props} /> */}
       </div>
       {/* <Omni /> */}
     </StyledPanel>

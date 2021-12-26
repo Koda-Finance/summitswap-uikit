@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { SvgProps } from "../../../components/Svg";
@@ -29,14 +29,20 @@ const Container = styled.div`
   }
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, setShowConnect }) => {
+const PanelBody: React.FC<Props> = ({
+  isPushed,
+  pushNav,
+  isMobile,
+  links,
+  setShowConnect,
+}) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
-  const handleClick = (item: any)=>{
+  const handleClick = (item: any) => {
     isMobile ? () => pushNav(false) : undefined;
     setShowConnect(item.isShowConnect);
-  }
+  };
 
   return (
     <Container>

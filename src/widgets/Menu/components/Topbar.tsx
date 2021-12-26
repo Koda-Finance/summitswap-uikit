@@ -57,29 +57,31 @@ const Topbar: React.FC<Props> = ({
       <StyledNav showMenu={showMenu} open={open}>
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
           <Logo />
-          {showConnect&&<ConnectAction justifyContent="flex-end" alignItems="center">
-            <UserBlock account={account} login={login} logout={logout} />
-            {!open ? (
-              <HamburgerIcon
-                ml="5px"
-                width="35px"
-                height="40px"
-                color="sidebarColor"
-                cursor="pointer"
-                onClick={() => setOpen(true)}
-              />
-            ) : (
-              <CloseIcon
-                ml="5px"
-                width="35px"
-                height="40px"
-                color="sidebarColor"
-                cursor="pointer"
-                onClick={() => setOpen(false)}
-              />
-            )}
-            {/* {profile && <Avatar profile={profile} />} */}
-          </ConnectAction>}
+          {showConnect && (
+            <ConnectAction justifyContent="flex-end" alignItems="center">
+              <UserBlock account={account} login={login} logout={logout} />
+              {!open ? (
+                <HamburgerIcon
+                  ml="5px"
+                  width="35px"
+                  height="40px"
+                  color="sidebarColor"
+                  cursor="pointer"
+                  onClick={() => setOpen(true)}
+                />
+              ) : (
+                <CloseIcon
+                  ml="5px"
+                  width="35px"
+                  height="40px"
+                  color="sidebarColor"
+                  cursor="pointer"
+                  onClick={() => setOpen(false)}
+                />
+              )}
+              {/* {profile && <Avatar profile={profile} />} */}
+            </ConnectAction>
+          )}
         </Flex>
         <SettingSocial
           mt="10px"
