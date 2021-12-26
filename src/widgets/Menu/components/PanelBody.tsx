@@ -46,7 +46,8 @@ const PanelBody: React.FC<Props> = ({
 
   return (
     <Container>
-      {/* {links.map((entry) => {
+      {console.log("hi i am tsting links", links)}
+      {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass
@@ -101,7 +102,7 @@ const PanelBody: React.FC<Props> = ({
             </MenuLink>
           </MenuEntry>
         );
-      })} */}
+      })}
     </Container>
   );
 };

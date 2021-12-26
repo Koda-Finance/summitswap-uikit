@@ -2611,26 +2611,28 @@ var PanelBody = function (_a) {
     var handleClick = function (item) {
         setShowConnect(item.isShowConnect);
     };
-    return (React.createElement(Container$3, null, links.map(function (entry) {
-        var Icon = Icons[entry.icon];
-        var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
-        var calloutClass = entry.calloutClass
-            ? entry.calloutClass
-            : undefined;
-        if (entry.items) {
-            var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
-            var initialOpenState = entry.initialOpenState === true
-                ? entry.initialOpenState
-                : itemsMatchIndex >= 0;
-            return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, isActive: entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
-                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: function () { return handleClick(item); } },
-                    React.createElement(MenuLink, { href: item.href }, item.label))); })));
-        }
-        return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
-                iconElement,
-                React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label))));
-    })));
+    return (React.createElement(Container$3, null,
+        console.log("hi i am tsting links", links),
+        links.map(function (entry) {
+            var Icon = Icons[entry.icon];
+            var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
+            var calloutClass = entry.calloutClass
+                ? entry.calloutClass
+                : undefined;
+            if (entry.items) {
+                var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
+                var initialOpenState = entry.initialOpenState === true
+                    ? entry.initialOpenState
+                    : itemsMatchIndex >= 0;
+                return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, isActive: entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
+                    entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: function () { return handleClick(item); } },
+                        React.createElement(MenuLink, { href: item.href }, item.label))); })));
+            }
+            return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
+                React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
+                    iconElement,
+                    React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label))));
+        })));
 };
 var templateObject_1$E;
 
@@ -2741,16 +2743,18 @@ var UserBlock = function (_a) {
             onPresentAccountModal();
         } }, accountEllipsis)) : (React.createElement(Button, { scale: "xxs", style: { height: 35 }, onClick: function () { return onPresentConnectModal(); } }, "CONNECT"))));
 };
-React.memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
+var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu; _a.account; _a.login; _a.logout; var kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links; _a.showConnect;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links; _a.showConnect;
     return (React.createElement(Flex, { flexDirection: "column" },
         React.createElement(StyledNav, { showMenu: showMenu, open: open },
             React.createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(Logo$3, null),
-                false ),
+                (React.createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
+                    React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                    !open ? (React.createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React.createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } }))))),
             React.createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(SettingsEntry$1, null,
                     React.createElement(CashState, { kodaPriceUsd: kodaPriceUsd }),
@@ -2792,7 +2796,7 @@ var SocialEntry$1 = styled.div(templateObject_6 || (templateObject_6 = __makeTem
     var theme = _a.theme;
     return theme.colors.sidebarColor;
 });
-styled(Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
+var ConnectAction = styled(Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
 var StyledNav = styled.nav(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ", " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"], ["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ",
     " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"])), function (_a) {
     var open = _a.open;
