@@ -40,13 +40,13 @@ const PanelBody: React.FC<Props> = ({
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = (item: any) => {
+    console.log("bhai jaan i am here", item, "ok")
     isMobile ? () => pushNav(false) : undefined;
     setShowConnect(item.isShowConnect);
   };
 
   return (
     <Container>
-      {console.log("hi i am tsting links", links)}
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
