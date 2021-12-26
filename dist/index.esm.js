@@ -2610,7 +2610,7 @@ var PanelBody = function (_a) {
     // Close the menu when a user clicks a link on mobile
     var handleClick = function (item) {
         console.log("bhai jaan i am here", item, "ok");
-        setShowConnect(item.isShowConnect);
+        setShowConnect(false);
     };
     return (React.createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons[entry.icon];
