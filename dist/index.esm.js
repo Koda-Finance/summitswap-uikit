@@ -2608,13 +2608,14 @@ var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.isMobile; var links = _a.links, setShowConnect = _a.setShowConnect;
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
-    var handleClick = function (item) {
-        console.log("bhai jaan i am here", item, "ok");
-        setShowConnect(false);
+    var handleClick = function (isShowConnect) {
+        console.log("bhai jaan i am here", isShowConnect, "ok");
+        setShowConnect(isShowConnect);
     };
     return (React.createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
+        var isShowConnect = entry.isShowConnect;
         var calloutClass = entry.calloutClass
             ? entry.calloutClass
             : undefined;
@@ -2624,11 +2625,11 @@ var PanelBody = function (_a) {
                 ? entry.initialOpenState
                 : itemsMatchIndex >= 0;
             return (React.createElement(Accordion$1, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: initialOpenState, className: calloutClass, isActive: entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
-                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: function () { return handleClick(entry); } },
+                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: function () { return handleClick(isShowConnect); } },
                     React.createElement(MenuLink, { href: item.href }, item.label))); })));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
+            React.createElement(MenuLink, { href: entry.href, onClick: function () { return handleClick(isShowConnect); } },
                 iconElement,
                 React.createElement(LinkLabelMemo, { isPushed: isPushed }, entry.label))));
     })));

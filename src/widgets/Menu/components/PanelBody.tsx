@@ -39,9 +39,9 @@ const PanelBody: React.FC<Props> = ({
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
-  const handleClick = (item: any) => {
-    console.log("bhai jaan i am here", item, "ok");
-    setShowConnect(false);
+  const handleClick = (isShowConnect: boolean) => {
+    console.log("bhai jaan i am here", isShowConnect, "ok");
+    setShowConnect(isShowConnect);
     isMobile ? () => pushNav(false) : undefined;
   };
 
@@ -50,6 +50,7 @@ const PanelBody: React.FC<Props> = ({
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
+        const isShowConnect = entry.isShowConnect;
         const calloutClass = entry.calloutClass
           ? entry.calloutClass
           : undefined;
@@ -82,7 +83,7 @@ const PanelBody: React.FC<Props> = ({
                     key={item.href}
                     secondary
                     isActive={item.href === location.pathname}
-                    onClick={() => handleClick(entry)}
+                    onClick={() => handleClick(isShowConnect)}
                   >
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
@@ -96,7 +97,10 @@ const PanelBody: React.FC<Props> = ({
             isActive={entry.href === location.pathname}
             className={calloutClass}
           >
-            <MenuLink href={entry.href} onClick={handleClick}>
+            <MenuLink
+              href={entry.href}
+              onClick={() => handleClick(isShowConnect)}
+            >
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>
