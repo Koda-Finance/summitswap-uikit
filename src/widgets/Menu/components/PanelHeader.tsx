@@ -26,23 +26,25 @@ const PanelHeader: React.FC<Props> = ({ account, login, logout }) => {
       <Flex justifyContent="center" padding="10px">
         <LogoTextIcon />
       </Flex>
-      <Flex justifyContent="center">
-        {account ? (
-          <Button
-            scale="sm"
-            variant="tertiary"
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-            {accountEllipsis}
-          </Button>
-        ) : (
-          <Button scale="xxs" onClick={() => onPresentConnectModal()}>
-            CONNECT
-          </Button>
-        )}
-      </Flex>
+      {false && (
+        <Flex justifyContent="center">
+          {account ? (
+            <Button
+              scale="sm"
+              variant="tertiary"
+              onClick={() => {
+                onPresentAccountModal();
+              }}
+            >
+              {accountEllipsis}
+            </Button>
+          ) : (
+            <Button scale="xxs" onClick={() => onPresentConnectModal()}>
+              CONNECT
+            </Button>
+          )}
+        </Flex>
+      )}
     </StyledContainer>
   );
 };

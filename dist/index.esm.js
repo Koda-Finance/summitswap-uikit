@@ -2299,16 +2299,14 @@ var useWalletModal = function (login, logout, account) {
 
 var PanelHeader = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
-    var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
-    var accountEllipsis = account
+    useWalletModal(login, logout, account);
+    account
         ? account.substring(0, 4) + "..." + account.substring(account.length - 4)
         : null;
     return (React.createElement(StyledContainer, null,
         React.createElement(Flex, { justifyContent: "center", padding: "10px" },
             React.createElement(Icon$s, null)),
-        React.createElement(Flex, { justifyContent: "center" }, account ? (React.createElement(Button, { scale: "sm", variant: "tertiary", onClick: function () {
-                onPresentAccountModal();
-            } }, accountEllipsis)) : (React.createElement(Button, { scale: "xxs", onClick: function () { return onPresentConnectModal(); } }, "CONNECT")))));
+        false ));
 };
 var StyledContainer = styled.div(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  margin-bottom: 30px;\n  padding: 10px;\n  z-index: 3;\n"], ["\n  margin-bottom: 30px;\n  padding: 10px;\n  z-index: 3;\n"])));
 var templateObject_1$B;
@@ -2742,18 +2740,16 @@ var UserBlock = function (_a) {
             onPresentAccountModal();
         } }, accountEllipsis)) : (React.createElement(Button, { scale: "xxs", style: { height: 35 }, onClick: function () { return onPresentConnectModal(); } }, "CONNECT"))));
 };
-var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
+React.memo(UserBlock, function (prevProps, nextProps) { return prevProps.account === nextProps.account; });
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links; _a.showConnect;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu; _a.account; _a.login; _a.logout; var kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links; _a.showConnect;
     return (React.createElement(Flex, { flexDirection: "column" },
         React.createElement(StyledNav, { showMenu: showMenu, open: open },
             React.createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(Logo$3, null),
-                (React.createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
-                    React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
-                    !open ? (React.createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React.createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } }))))),
+                false ),
             React.createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(SettingsEntry$1, null,
                     React.createElement(CashState, { kodaPriceUsd: kodaPriceUsd }),
@@ -2795,7 +2791,7 @@ var SocialEntry$1 = styled.div(templateObject_6 || (templateObject_6 = __makeTem
     var theme = _a.theme;
     return theme.colors.sidebarColor;
 });
-var ConnectAction = styled(Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
+styled(Flex)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"], ["\n  margin-top: 10px;\n  @media (min-width: 440px) {\n    margin-top: 0;\n  }\n"])));
 var StyledNav = styled.nav(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ", " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"], ["\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  padding-top: 12px;\n  align-items: center;\n  width: 100%;\n  height: ",
     " !important;\n  @media (min-width: 440px) {\n    height: ", " !important;\n  }\n  transition: height 0.3s;\n  background: ", ";\n  z-index: 20;\n  ", " {\n    height: 72px;\n    z-index: 1;\n  }\n  transform: translate3d(0, 0, 0);\n  > div:first-of-type {\n    flex-direction: column;\n    @media (min-width: 440px) {\n      flex-direction: row;\n    }\n  }\n"])), function (_a) {
     var open = _a.open;
