@@ -144,6 +144,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           setShowConnect={setShowConnect}
+          showConnect={showConnect}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}

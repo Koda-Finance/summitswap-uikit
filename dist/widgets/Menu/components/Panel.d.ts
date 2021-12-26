@@ -8,6 +8,7 @@ interface Props extends PanelProps, PushedProps {
     login: Login;
     logout: () => void;
     setShowConnect: Dispatch<SetStateAction<boolean>>;
+    showConnect: boolean;
 }
 declare const Panel: React.FC<Props>;
 export default Panel;

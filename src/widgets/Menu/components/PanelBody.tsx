@@ -82,7 +82,7 @@ const PanelBody: React.FC<Props> = ({
                     key={item.href}
                     secondary
                     isActive={item.href === location.pathname}
-                    onClick={() => handleClick(item)}
+                    onClick={() => handleClick(entry)}
                   >
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
