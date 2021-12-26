@@ -57,7 +57,7 @@ const Topbar: React.FC<Props> = ({
       <StyledNav showMenu={showMenu} open={open}>
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
           <Logo />
-          {false && (
+          {true && (
             <ConnectAction justifyContent="flex-end" alignItems="center">
               <UserBlock account={account} login={login} logout={logout} />
               {!open ? (
