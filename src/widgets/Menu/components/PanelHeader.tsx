@@ -17,7 +17,7 @@ const PanelHeader: React.FC<Props> = ({
   account,
   login,
   logout,
-  showConnect,
+  showConnect=true,
 }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
     login,

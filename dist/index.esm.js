@@ -2267,8 +2267,8 @@ var useWalletModal = function (login, logout, account) {
 };
 
 var PanelHeader = function (_a) {
-    var account = _a.account, login = _a.login, logout = _a.logout, showConnect = _a.showConnect;
-    var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
+    var account = _a.account, login = _a.login, logout = _a.logout, _b = _a.showConnect, showConnect = _b === void 0 ? true : _b;
+    var _c = useWalletModal(login, logout, account), onPresentConnectModal = _c.onPresentConnectModal, onPresentAccountModal = _c.onPresentAccountModal;
     var accountEllipsis = account
         ? account.substring(0, 4) + "..." + account.substring(account.length - 4)
         : null;
@@ -2574,6 +2574,7 @@ var PanelBody = function (_a) {
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = function (isShowConnect) {
+        if (isShowConnect === void 0) { isShowConnect = true; }
         setShowConnect(isShowConnect);
     };
     return (React.createElement(Container$3, null, links.map(function (entry) {
