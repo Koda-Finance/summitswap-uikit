@@ -10,7 +10,7 @@ import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
-  setShowConnect: Dispatch<SetStateAction<boolean>>;
+  setIsConnectButtonShown: Dispatch<SetStateAction<boolean>>;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
@@ -34,13 +34,13 @@ const PanelBody: React.FC<Props> = ({
   pushNav,
   isMobile,
   links,
-  setShowConnect,
+  setIsConnectButtonShown,
 }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
-  const handleClick = (isShowConnect=true) => {
-    setShowConnect(isShowConnect);
+  const handleClick = (isConnectButtonShown: boolean) => {
+    setIsConnectButtonShown(isConnectButtonShown);
     isMobile ? () => pushNav(false) : undefined;
   };
 
@@ -49,7 +49,7 @@ const PanelBody: React.FC<Props> = ({
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
-        const isShowConnect = entry.isShowConnect;
+        const isConnectButtonShown = entry.isConnectButtonShown == undefined ? true : entry.isConnectButtonShown;
         const calloutClass = entry.calloutClass
           ? entry.calloutClass
           : undefined;
@@ -82,7 +82,7 @@ const PanelBody: React.FC<Props> = ({
                     key={item.href}
                     secondary
                     isActive={item.href === location.pathname}
-                    onClick={() => handleClick(isShowConnect)}
+                    onClick={() => handleClick(isConnectButtonShown)}
                   >
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
@@ -98,7 +98,7 @@ const PanelBody: React.FC<Props> = ({
           >
             <MenuLink
               href={entry.href}
-              onClick={() => handleClick(isShowConnect)}
+              onClick={() => handleClick(isConnectButtonShown)}
             >
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
