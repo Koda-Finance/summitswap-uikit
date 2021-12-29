@@ -12,31 +12,36 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-iBPRYJ gkOLPp"
+        class="sc-iBPRYJ bUSpXL"
       >
         <div
-          class="sc-fubCfw lbhyFh"
+          class="sc-fubCfw hKDYgj"
         >
           <div
             class="sc-dlfnbm sc-hKgILt sc-pFZIQ isWJdv dRpfYw ePMCIJ"
           >
             <h2
-              class="sc-bdfBwQ sc-gsTCUz gWEhOj euWWbB"
-              color="text"
+              class="sc-bdfBwQ sc-gsTCUz dKBMIJ euWWbB"
+              color="sidebarColor"
+              font-size="26px"
+              font-weight="800"
             >
               Title
             </h2>
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgupP fUokNz sc-gKsewC kpTpvg"
+            class="sc-jSgupP eAzziZ sc-gKsewC kpTpvg"
             scale="md"
+            style="justify-content: flex-end;"
           >
             <svg
-              class="sc-eCssSg iaafwt"
-              color="primary"
+              class="sc-eCssSg fEgmJq"
+              color="sidebarColor"
+              cursor="pointer"
+              height="24px"
               viewBox="0 0 24 24"
-              width="20px"
+              width="24px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -46,7 +51,12 @@ it("renders correctly", () => {
           </button>
         </div>
         <div
-          class="sc-dlfnbm sc-hKgILt claMmV AmOVA"
+          class="sc-jrAGrp bQXgTx"
+        >
+          <div />
+        </div>
+        <div
+          class="sc-dlfnbm sc-hKgILt bgWuNo AmOVA"
         >
           body
         </div>
