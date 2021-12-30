@@ -48,7 +48,7 @@ const Topbar: React.FC<Props> = ({
     <Flex flexDirection="column">
       <StyledNav showMenu={showMenu} open={open}>
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
-          <Logo />(
+          <Logo />
           <ConnectAction justifyContent="flex-end" alignItems="center">
             <UserBlock account={account} login={login} logout={logout} />
             {!open ? (
@@ -72,7 +72,6 @@ const Topbar: React.FC<Props> = ({
             )}
             {/* {profile && <Avatar profile={profile} />} */}
           </ConnectAction>
-          )
         </Flex>
         <SettingSocial
           mt="10px"
