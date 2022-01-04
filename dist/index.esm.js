@@ -2657,11 +2657,16 @@ var PanelFooter = function (_a) {
             (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
                 (React.createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
         React.createElement(SocialEntry, null,
-            React.createElement(Icon$Y, null),
-            React.createElement(Icon$1e, null),
-            React.createElement(Icon$W, null),
-            React.createElement(Icon$1i, null),
-            React.createElement(Icon$14, null))));
+            React.createElement("a", { href: "https://discord.com/invite/FBgEmJmHuc" },
+                React.createElement(Icon$Y, null)),
+            React.createElement("a", { href: "https://t.me/kodakingofdogaltschat" },
+                React.createElement(Icon$1e, null)),
+            React.createElement("a", { href: "https://www.facebook.com/KodaCryptocurrency" },
+                React.createElement(Icon$W, null)),
+            React.createElement("a", { href: "https://twitter.com/CoinKoda" },
+                React.createElement(Icon$1i, null)),
+            React.createElement("a", { href: "https://www.instagram.com/kodacryptocurrency" },
+                React.createElement(Icon$14, null)))));
 };
 var templateObject_1$H, templateObject_2$f, templateObject_3$7;
 
