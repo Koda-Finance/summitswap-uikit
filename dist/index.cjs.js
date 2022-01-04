@@ -2670,11 +2670,16 @@ var PanelFooter = function (_a) {
             (currentLang && (langs === null || langs === void 0 ? void 0 : langs.length) && setLang) ?
                 (React__default['default'].createElement(LangSelector$1, { currentLang: currentLang, langs: langs, setLang: setLang })) : null),
         React__default['default'].createElement(SocialEntry, null,
-            React__default['default'].createElement(Icon$Y, null),
-            React__default['default'].createElement(Icon$1e, null),
-            React__default['default'].createElement(Icon$W, null),
-            React__default['default'].createElement(Icon$1i, null),
-            React__default['default'].createElement(Icon$14, null))));
+            React__default['default'].createElement("a", { href: "https://discord.com/invite/FBgEmJmHuc" },
+                React__default['default'].createElement(Icon$Y, null)),
+            React__default['default'].createElement("a", { href: "https://t.me/kodakingofdogaltschat" },
+                React__default['default'].createElement(Icon$1e, null)),
+            React__default['default'].createElement("a", { href: "https://www.facebook.com/KodaCryptocurrency" },
+                React__default['default'].createElement(Icon$W, null)),
+            React__default['default'].createElement("a", { href: "https://twitter.com/CoinKoda" },
+                React__default['default'].createElement(Icon$1i, null)),
+            React__default['default'].createElement("a", { href: "https://www.instagram.com/kodacryptocurrency" },
+                React__default['default'].createElement(Icon$14, null)))));
 };
 var templateObject_1$H, templateObject_2$f, templateObject_3$7;
 
