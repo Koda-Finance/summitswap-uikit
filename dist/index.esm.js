@@ -2157,7 +2157,7 @@ var connectors = [
     {
         title: "TrustWallet",
         icon: Icon$R,
-        connectorId: ConnectorNames.Injected,
+        connectorId: ConnectorNames.WalletConnect,
     },
     {
         title: "MathWallet",
@@ -2182,7 +2182,7 @@ var connectors = [
     {
         title: "SafePal Wallet",
         icon: Icon$U,
-        connectorId: ConnectorNames.Injected,
+        connectorId: ConnectorNames.WalletConnect,
     },
 ];
 var connectorLocalStorageKey = "connectorId";
