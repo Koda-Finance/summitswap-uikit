@@ -79,11 +79,11 @@ const PanelFooter: React.FC<Props> = ({
               (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null}  
       </SettingsEntry>
       <SocialEntry>
-        <DiscordIcon />
-        <TelegramIcon />
-        <FacebookIcon />
-        <TwitterIcon />
-        <InstagramIcon />
+        <a href="https://discord.com/invite/FBgEmJmHuc"><DiscordIcon /></a>
+        <a href="https://t.me/kodakingofdogaltschat"><TelegramIcon /></a>
+        <a href="https://www.facebook.com/KodaCryptocurrency"><FacebookIcon /></a>
+        <a href="https://twitter.com/CoinKoda"><TwitterIcon /></a>
+        <a href="https://www.instagram.com/kodacryptocurrency"><InstagramIcon /></a>
       </SocialEntry>
     </Container>
   );
