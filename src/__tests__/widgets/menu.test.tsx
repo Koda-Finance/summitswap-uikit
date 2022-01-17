@@ -56,7 +56,7 @@ it("renders correctly", () => {
         class="sc-dlfnbm sc-hKgILt isWJdv AmOVA"
       >
         <nav
-          class="sc-dacFzL kkYqGA"
+          class="sc-dacFzL joTRHM"
         >
           <div
             class="sc-dlfnbm sc-hKgILt lkQHhn gPTDCk"
@@ -69,7 +69,7 @@ it("renders correctly", () => {
               />
             </div>
             <div
-              class="sc-dlfnbm sc-hKgILt sc-dtwoBo isWJdv jszezi hvSSPu"
+              class="sc-dlfnbm sc-hKgILt sc-dtwoBo isWJdv jszezi leNCJm"
             >
               <div>
                 <button
@@ -95,7 +95,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-dlfnbm sc-hKgILt sc-jONnTn kvYdsH clYVkQ gmmSUD"
+            class="sc-dlfnbm sc-hKgILt sc-jONnTn kvYdsH clYVkQ kjPVLb"
           >
             <div
               class="sc-kIeTtH jdFgRD"
@@ -114,7 +114,7 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="sc-hOqqkJ igxdrZ"
+              class="sc-hOqqkJ jkpXNQ"
             >
               <svg
                 class="sc-eCssSg fQrLiT"
@@ -184,7 +184,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-dlfnbm sc-bTvRPi iaMnCl kBkLBq"
+            class="sc-dlfnbm sc-bTvRPi iaMnCl icOSmS"
           >
             <div
               class="sc-jeGSBP cqDNah"
@@ -226,7 +226,7 @@ it("renders correctly", () => {
             class="sc-dwfUOf gkiFtF"
           />
           <div
-            class="sc-laRPJI Pvzfs"
+            class="sc-laRPJI bxUQdQ"
           >
             <div
               class="sc-dlfnbm sc-hKgILt CdpQa hhgqpc"
@@ -311,6 +311,9 @@ it("renders correctly", () => {
               <div
                 class="sc-GqfZa fjPQYm"
               >
+              <a
+                href="https://discord.com/invite/FBgEmJmHuc"
+              >
                 <svg
                   class="sc-eCssSg fQrLiT"
                   color="primary"
@@ -324,6 +327,10 @@ it("renders correctly", () => {
                     xlink:href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYwOTlFQkRFMUFCMDExRUNCMjU1Q0ZDRTA4NzVFMTMyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjYwOTlFQkRGMUFCMDExRUNCMjU1Q0ZDRTA4NzVFMTMyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjA5OUVCREMxQUIwMTFFQ0IyNTVDRkNFMDg3NUUxMzIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjA5OUVCREQxQUIwMTFFQ0IyNTVDRkNFMDg3NUUxMzIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4bVx7+AAABD0lEQVR42tSVgRHCIAwApecAOIF0AhmBDXQDO0o3qU5QN2hHcAPcoG4QE42VVkBPqXfmLtc7kjwpCUEAwGwKyWa/FPwLhVrBTbTHrtlGPupdaAkPaSLgxvErX0GrEZTUwrNYx36XKgQt4HspfGCbAGwHXYELG/yoBHVXzOrbbZ2wqa4swRl3+JGJwGchxCLjdpIJM5bEpKMwAYcWdxahaLa1AbMh8GqCy7ucR7rBQGRCQXx6aZG4cH0BMw/09AFoHCN9Y/OAmqPuaOdYVuyTc8ywuDRIPJ1B1d5zgOY6KCc70iMq3bKtNx7B1Hd14O7XkeKFYmhCStfR8GLHDl1siPNj4PpSrHGP4r/evIsAAwAEVK6XOKORxAAAAABJRU5ErkJggg=="
                   />
                 </svg>
+              </a>
+              <a
+                href="https://t.me/kodakingofdogaltschat"
+              >
                 <svg
                   class="sc-eCssSg fQrLiT"
                   color="primary"
@@ -337,6 +344,10 @@ it("renders correctly", () => {
                     xlink:href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ1NzY4QkM1MUFCMDExRUNCQ0RCRTU5MjkwMkRFNTJCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ1NzY4QkM2MUFCMDExRUNCQ0RCRTU5MjkwMkRFNTJCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDU3NjhCQzMxQUIwMTFFQ0JDREJFNTkyOTAyREU1MkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDU3NjhCQzQxQUIwMTFFQ0JDREJFNTkyOTAyREU1MkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5EvOKlAAAA60lEQVR42mL8//8/Ay0AE8NgB0CfBwDx/P8Q8J5SwxSAuB+I7/9HA+QYJgDECUB8/j9u8J5cr6IDdEvWsxDyKpDKB+IAIFbAouQAEB+EqkEGF8n2KhAXQNVhAw7EehUZzIda3o9LAczABmyxiiMcHaB68DngPMxgQgDk7QakYNpPyEfIaREUVuuxKFoPjUCYoeeJcEgCoWQVgCRmAHU5McCA2PRLiqHvSSmEQC4XIDIfXSDFYHkScvxBUgxGznEbkF2Fz8XEhDEsefUjpQ5c6ViAVIMTcKQe5Ei9T83CXQHdRzDAOOTqPIAAAwCvHLqZI8v98gAAAABJRU5ErkJggg=="
                   />
                 </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/KodaCryptocurrency"
+              >
                 <svg
                   class="sc-eCssSg fQrLiT"
                   color="primary"
@@ -350,6 +361,10 @@ it("renders correctly", () => {
                     xlink:href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2MTdGMjUxMUFCMTExRUNCRTkxRjkwMEVENUY5MkQyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ2MTdGMjUyMUFCMTExRUNCRTkxRjkwMEVENUY5MkQyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDYxN0YyNEYxQUIxMTFFQ0JFOTFGOTAwRUQ1RjkyRDIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDYxN0YyNTAxQUIxMTFFQ0JFOTFGOTAwRUQ1RjkyRDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5OffmHAAAAjklEQVR42mL8//8/Ay0AEy4JRkZGOAYCAyA+D8T/sWDs+nG5GGogA1BeAWqoAC4zSHIxEkjAYyjpQUEpYCFDzwcgToTSVDX4AjD8N8A4uOIIp8FADQ1Qpj2alAKSHAg0kJQq8CUlaqUK6mYQIsEDcnIeGACZjWhSBxgRQJHu6XjU4FGDh4PBjLSqTAECDACOOCiF6MHX4wAAAABJRU5ErkJggg=="
                   />
                 </svg>
+              </a>
+              <a
+                href="https://twitter.com/CoinKoda"
+              >
                 <svg
                   class="sc-eCssSg fQrLiT"
                   color="primary"
@@ -363,6 +378,10 @@ it("renders correctly", () => {
                     xlink:href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ1QTkzNzY3MUFCMDExRUNCNTk4ODZENDM4QjU2MEYxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ1QTkzNzY4MUFCMDExRUNCNTk4ODZENDM4QjU2MEYxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDVBOTM3NjUxQUIwMTFFQ0I1OTg4NkQ0MzhCNTYwRjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDVBOTM3NjYxQUIwMTFFQ0I1OTg4NkQ0MzhCNTYwRjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5un7JKAAAA60lEQVR42tSVgQ2EIAxFDydgBEdgBEZwBEZwBDcwNwGjOIJswN0E3AZcuUBSDWgVL7lr8qMx5bWWUpj3/vYNY38H/hjA2wO+Hcj6pWkQj1LBJzm78IEAVb5sKVhg8eAsceQNKI+L9mwGTWtwiiwLJfBEMMelyDn0IBF9BiKY42x6wgJLyRZDJXERxabEbUAG1F7UuWa9McNFGXe5dhoroQ7zGvT+BD0qynAvHQBRka1dtFnhELgTYEEZMvzgZioKVMZJRcna5Y4+hukTv643a4rncWy3eWe4jNTZzUodAo+U0YsxZn7manoLMAC8p6UMgmqfQwAAAABJRU5ErkJggg=="
                   />
                 </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kodacryptocurrency"
+              >
                 <svg
                   class="sc-eCssSg fQrLiT"
                   color="primary"
@@ -376,6 +395,7 @@ it("renders correctly", () => {
                     xlink:href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjA2NzY4NkJBMUFCMTExRUNCMzA1ODQ0MUMwMTA1RDU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjA2NzY4NkJCMUFCMTExRUNCMzA1ODQ0MUMwMTA1RDU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDY3Njg2QjgxQUIxMTFFQ0IzMDU4NDQxQzAxMDVENTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDY3Njg2QjkxQUIxMTFFQ0IzMDU4NDQxQzAxMDVENTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Q1bKUAAABLklEQVR42rRVgRGDIAyMXgdghI5AN3CDuoF2A0dwE8oITtBu4Ag6ghvQYEMbEbhTz7/7O9TkQwiJAARjjEA2yN5sR0++AjjwhUQO5jishrSaGUXpkVeK80R2yGk2yLI3BIB+BS2t/x1Z0/OIvAGl4FDCRtgAlHHJdBpgZ6p2iPJNWXHlzjzH75LsusSOrMOLqLxjALZ2GhJYxCIgqhKFUnST2jn1/yZmXBJpKq8gmtYVFbqm4j6Y28QFZgTSN7Gz9zIpvG9fvYiwcxwSGQ2hwE4vj/i5O60Tl0J7tgvkcBJiwiMrVAyVZ7s6q3OLFzBQ3nBpiUMsKN/QoQaJdOmqQYRvaC8/2mjWFL9miUw9waPsHkKJDPvDY5OJLsbmkUEvKfXwoD/r1wRn/Uw/AgwAkdQW9nW5S6QAAAAASUVORK5CYII="
                   />
                 </svg>
+              </a>
               </div>
             </div>
           </div>
