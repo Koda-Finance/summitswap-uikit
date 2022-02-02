@@ -36,7 +36,7 @@ export interface MenuEntry {
   href?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
-  showConnectButton: boolean;
+  showConnectButton?: boolean;
 }
 
 export interface PanelProps {
