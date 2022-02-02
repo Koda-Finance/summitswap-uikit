@@ -58,6 +58,7 @@ const Menu: React.FC<NavProps> = ({
   kodaPriceUsd,
   links,
   profile,
+  showConnectButton,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
@@ -141,6 +142,7 @@ const Menu: React.FC<NavProps> = ({
           kodaPriceUsd={kodaPriceUsd}
           pushNav={setIsPushed}
           links={links}
+          showConnectButton={showConnectButton}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
