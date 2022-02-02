@@ -10,15 +10,9 @@ interface Props {
   account?: string;
   login: Login;
   logout: () => void;
-  isConnectButtonShown: boolean;
 }
 
-const PanelHeader: React.FC<Props> = ({
-  account,
-  login,
-  logout,
-  isConnectButtonShown=true,
-}) => {
+const PanelHeader: React.FC<Props> = ({ account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
     login,
     logout,
@@ -32,25 +26,23 @@ const PanelHeader: React.FC<Props> = ({
       <Flex justifyContent="center" padding="10px">
         <LogoTextIcon />
       </Flex>
-      {isConnectButtonShown && (
-        <Flex justifyContent="center">
-          {account ? (
-            <Button
-              scale="sm"
-              variant="tertiary"
-              onClick={() => {
-                onPresentAccountModal();
-              }}
-            >
-              {accountEllipsis}
-            </Button>
-          ) : (
-            <Button scale="xxs" onClick={() => onPresentConnectModal()}>
-              CONNECT
-            </Button>
-          )}
-        </Flex>
-      )}
+      <Flex justifyContent="center">
+        {account ? (
+          <Button
+            scale="sm"
+            variant="tertiary"
+            onClick={() => {
+              onPresentAccountModal();
+            }}
+          >
+            {accountEllipsis}
+          </Button>
+        ) : (
+          <Button scale="xxs" onClick={() => onPresentConnectModal()}>
+            CONNECT
+          </Button>
+        )}
+      </Flex>
     </StyledContainer>
   );
 };

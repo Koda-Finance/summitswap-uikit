@@ -13,8 +13,6 @@ interface Props extends PanelProps, PushedProps {
   account?: string;
   login: Login;
   logout: () => void;
-  setIsConnectButtonShown: Dispatch<SetStateAction<boolean>>;
-  isConnectButtonShown: boolean;
 }
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
@@ -61,16 +59,11 @@ const Omni = styled.div`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, showMenu, account, login, logout, isConnectButtonShown } = props;
+  const { isPushed, showMenu, account, login, logout } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <BoldV />
-      <PanelHeader
-        account={account}
-        login={login}
-        logout={logout}
-        isConnectButtonShown={isConnectButtonShown}
-      />
+      <PanelHeader account={account} login={login} logout={logout} />
       <div style={{ position: "relative", height: "100%" }}>
         <PanelBody {...props} />
         <PanelFooter {...props} />

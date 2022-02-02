@@ -4,7 +4,6 @@ interface Props {
     account?: string;
     login: Login;
     logout: () => void;
-    isConnectButtonShown: boolean;
 }
 declare const PanelHeader: React.FC<Props>;
 export default PanelHeader;
