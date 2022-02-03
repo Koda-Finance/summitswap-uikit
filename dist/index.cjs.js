@@ -2732,13 +2732,13 @@ var UserBlock$1 = React__default['default'].memo(UserBlock, function (prevProps,
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links, showConnectButton = _a.showConnectButton;
     return (React__default['default'].createElement(Flex, { flexDirection: "column" },
         React__default['default'].createElement(StyledNav, { showMenu: showMenu, open: open },
             React__default['default'].createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React__default['default'].createElement(Logo$3, null),
                 React__default['default'].createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
-                    React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                    showConnectButton && (React__default['default'].createElement(UserBlock$1, { account: account, login: login, logout: logout })),
                     !open ? (React__default['default'].createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React__default['default'].createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } })))),
             React__default['default'].createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React__default['default'].createElement(SettingsEntry$1, null,
@@ -2851,7 +2851,7 @@ var Menu = function (_a) {
     // Find the home link if provided
     links.find(function (link) { return link.label === "Home"; });
     return (React__default['default'].createElement(Wrapper$1, null,
-        isMobile && (React__default['default'].createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links })),
+        isMobile && (React__default['default'].createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnectButton: showConnectButton })),
         React__default['default'].createElement(BodyWrapper, null,
             React__default['default'].createElement(Panel, { account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnectButton: showConnectButton }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children))));

@@ -2719,13 +2719,13 @@ var UserBlock$1 = React.memo(UserBlock, function (prevProps, nextProps) { return
 
 var Icons$2 = IconModule;
 var Topbar = function (_a) {
-    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links;
+    var open = _a.open, setOpen = _a.setOpen, showMenu = _a.showMenu, account = _a.account, login = _a.login, logout = _a.logout, kodaPriceUsd = _a.kodaPriceUsd, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang, pushNav = _a.pushNav, links = _a.links, showConnectButton = _a.showConnectButton;
     return (React.createElement(Flex, { flexDirection: "column" },
         React.createElement(StyledNav, { showMenu: showMenu, open: open },
             React.createElement(Flex, { minWidth: "85%", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(Logo$3, null),
                 React.createElement(ConnectAction, { justifyContent: "flex-end", alignItems: "center" },
-                    React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                    showConnectButton && (React.createElement(UserBlock$1, { account: account, login: login, logout: logout })),
                     !open ? (React.createElement(Icon$$, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(true); } })) : (React.createElement(Icon$l, { ml: "5px", width: "35px", height: "40px", color: "sidebarColor", cursor: "pointer", onClick: function () { return setOpen(false); } })))),
             React.createElement(SettingSocial, { mt: "10px", minWidth: "85%", flexDirection: "column", justifyContent: "space-between", alignItems: "center" },
                 React.createElement(SettingsEntry$1, null,
@@ -2838,7 +2838,7 @@ var Menu = function (_a) {
     // Find the home link if provided
     links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(Wrapper$1, null,
-        isMobile && (React.createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links })),
+        isMobile && (React.createElement(Topbar, { open: open, setOpen: setOpen, account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnectButton: showConnectButton })),
         React.createElement(BodyWrapper, null,
             React.createElement(Panel, { account: account, login: login, logout: logout, isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, kodaPriceUsd: kodaPriceUsd, pushNav: setIsPushed, links: links, showConnectButton: showConnectButton }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children))));
