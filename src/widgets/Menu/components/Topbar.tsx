@@ -22,14 +22,12 @@ import LangSelector from "./LangSelector";
 import { MenuEntry, LinkLabel } from "../components/MenuEntry";
 import MenuLink from "../components/MenuLink";
 import Accordion from "./Accordion";
-import { PanelProps, PushedProps } from "../types";
+import { NavProps, PushedProps } from "../types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends NavProps, PushedProps {
   open: any;
   setOpen: any;
   account?: string;
-  login: Login;
-  logout: () => void;
   showMenu?: any;
   isMobile: boolean;
 }
@@ -49,6 +47,7 @@ const Topbar: React.FC<Props> = ({
   setLang,
   pushNav,
   links,
+  showConnectButton,
 }) => {
   return (
     <Flex flexDirection="column">
@@ -56,7 +55,9 @@ const Topbar: React.FC<Props> = ({
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
           <Logo />
           <ConnectAction justifyContent="flex-end" alignItems="center">
-            <UserBlock account={account} login={login} logout={logout} />
+            {showConnectButton && (
+              <UserBlock account={account} login={login} logout={logout} />
+            )}
             {!open ? (
               <HamburgerIcon
                 ml="5px"

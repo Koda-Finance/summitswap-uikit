@@ -123,6 +123,7 @@ const Menu: React.FC<NavProps> = ({
           kodaPriceUsd={kodaPriceUsd}
           pushNav={setIsPushed}
           links={links}
+          showConnectButton={showConnectButton}
         />
       )}
       <BodyWrapper>
