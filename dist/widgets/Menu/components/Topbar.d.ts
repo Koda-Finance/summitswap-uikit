@@ -1,12 +1,9 @@
-import React from 'react';
-import { Login } from "../../WalletModal/types";
-import { PanelProps, PushedProps } from "../types";
-interface Props extends PanelProps, PushedProps {
+import React from "react";
+import { NavProps, PushedProps } from "../types";
+interface Props extends NavProps, PushedProps {
     open: any;
     setOpen: any;
     account?: string;
-    login: Login;
-    logout: () => void;
     showMenu?: any;
     isMobile: boolean;
 }

@@ -10,7 +10,6 @@ import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
-  setIsConnectButtonShown: Dispatch<SetStateAction<boolean>>;
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
@@ -29,18 +28,11 @@ const Container = styled.div`
   }
 `;
 
-const PanelBody: React.FC<Props> = ({
-  isPushed,
-  pushNav,
-  isMobile,
-  links,
-  setIsConnectButtonShown,
-}) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
-  const handleClick = (isConnectButtonShown: boolean) => {
-    setIsConnectButtonShown(isConnectButtonShown);
+  const handleClick = () => {
     isMobile ? () => pushNav(false) : undefined;
   };
 
@@ -49,7 +41,6 @@ const PanelBody: React.FC<Props> = ({
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
-        const isConnectButtonShown = entry.isConnectButtonShown == undefined ? true : entry.isConnectButtonShown;
         const calloutClass = entry.calloutClass
           ? entry.calloutClass
           : undefined;
@@ -82,7 +73,7 @@ const PanelBody: React.FC<Props> = ({
                     key={item.href}
                     secondary
                     isActive={item.href === location.pathname}
-                    onClick={() => handleClick(isConnectButtonShown)}
+                    onClick={handleClick}
                   >
                     <MenuLink href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
@@ -96,10 +87,7 @@ const PanelBody: React.FC<Props> = ({
             isActive={entry.href === location.pathname}
             className={calloutClass}
           >
-            <MenuLink
-              href={entry.href}
-              onClick={() => handleClick(isConnectButtonShown)}
-            >
+            <MenuLink href={entry.href} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
             </MenuLink>

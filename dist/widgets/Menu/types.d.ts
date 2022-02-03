@@ -30,7 +30,7 @@ export interface MenuEntry {
     href?: string;
     calloutClass?: string;
     initialOpenState?: boolean;
-    isConnectButtonShown?: boolean;
+    showConnectButton?: boolean;
 }
 export interface PanelProps {
     isDark: boolean;
@@ -47,4 +47,5 @@ export interface NavProps extends PanelProps {
     login: Login;
     profile?: Profile;
     logout: () => void;
+    showConnectButton: boolean;
 }

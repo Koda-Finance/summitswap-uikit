@@ -58,13 +58,13 @@ const Menu: React.FC<NavProps> = ({
   kodaPriceUsd,
   links,
   profile,
+  showConnectButton,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
-  const [isConnectButtonShown, setIsConnectButtonShown] = useState(true);
   const [open, setOpen] = useState(false);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -123,6 +123,7 @@ const Menu: React.FC<NavProps> = ({
           kodaPriceUsd={kodaPriceUsd}
           pushNav={setIsPushed}
           links={links}
+          showConnectButton={showConnectButton}
         />
       )}
       <BodyWrapper>
@@ -142,8 +143,7 @@ const Menu: React.FC<NavProps> = ({
           kodaPriceUsd={kodaPriceUsd}
           pushNav={setIsPushed}
           links={links}
-          setIsConnectButtonShown={setIsConnectButtonShown}
-          isConnectButtonShown={isConnectButtonShown}
+          showConnectButton={showConnectButton}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
