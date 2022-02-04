@@ -98,11 +98,11 @@ const Topbar: React.FC<Props> = ({
             ) : null}
           </SettingsEntry>
           <SocialEntry>
-            <DiscordIcon />
-            <TelegramIcon />
-            <FacebookIcon />
-            <TwitterIcon />
-            <InstagramIcon />
+            <a href="https://discord.com/invite/FBgEmJmHuc"><DiscordIcon /></a>
+            <a href="https://t.me/kodakingofdogaltschat"><TelegramIcon /></a>
+            <a href="https://www.facebook.com/KodaCryptocurrency"><FacebookIcon /></a>
+            <a href="https://twitter.com/CoinKoda"><TwitterIcon /></a>
+            <a href="https://www.instagram.com/kodacryptocurrency"><InstagramIcon /></a>
           </SocialEntry>
         </SettingSocial>
         <EntryScroll minWidth="85%" padding="20px 0px">
@@ -215,13 +215,13 @@ const SocialEntry = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  > svg {
+  > a {
     cursor: pointer;
     width: 20px;
     height: 20px;
     fill: ${({ theme }) => theme.colors.sidebarColor};
   }
-  > svg + svg {
+  > a + a {
     margin-left: 5px;
   }
 `;
