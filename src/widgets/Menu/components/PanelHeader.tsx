@@ -25,7 +25,9 @@ const PanelHeader: React.FC<Props> = ({ account, login, logout, showConnectButto
   return (
     <StyledContainer>
       <Flex justifyContent="center" padding="10px">
-        <LogoTextIcon />
+        <a href="/">
+          <LogoTextIcon />
+        </a>
       </Flex>
       {showConnectButton && (
         <Flex justifyContent="center">
