@@ -12,6 +12,7 @@ const connectors: Config[] = [
     title: "Metamask",
     icon: Metamask,
     connectorId: ConnectorNames.Injected,
+    redirectUrl: `https://metamask.app.link/dapp/${window.location.href.replace(/^https?:\/\//, "")}`,
   },
   {
     title: "TrustWallet",
@@ -22,11 +23,13 @@ const connectors: Config[] = [
     title: "MathWallet",
     icon: MathWallet,
     connectorId: ConnectorNames.Injected,
+    redirectUrl: `https://mathwallet.org/`,
   },
   {
     title: "TokenPocket",
     icon: TokenPocket,
     connectorId: ConnectorNames.Injected,
+    redirectUrl: `https://www.tokenpocket.pro/`,
   },
   {
     title: "WalletConnect",

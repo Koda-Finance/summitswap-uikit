@@ -29,13 +29,25 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
     onDismiss={onDismiss}
   >
     {config.map((entry, index) => (
-      <WalletCard
-        key={entry.title}
-        login={login}
-        walletConfig={entry}
-        onDismiss={onDismiss}
-        mb={index < config.length - 1 ? "8px" : "0"}
-      />
+      !window.ethereum && entry.redirectUrl ? (
+        <a href={entry.redirectUrl} target="_blank" rel="noopener noreferrer">
+          <WalletCard
+            key={entry.title}
+            login={login}
+            walletConfig={entry}
+            onDismiss={onDismiss}
+            mb={index < config.length - 1 ? "8px" : "0"}
+          />
+        </a>
+      ) : (
+        <WalletCard
+          key={entry.title}
+          login={login}
+          walletConfig={entry}
+          onDismiss={onDismiss}
+          mb={index < config.length - 1 ? "8px" : "0"}
+        />
+      )
     ))}
     <HelpLink href="https://t.me/kodakingofdogaltschat" external>
       <HelpIcon color="sidebarColor" fontSize="16px" mr="6px" />

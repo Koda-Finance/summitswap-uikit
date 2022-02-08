@@ -2166,6 +2166,7 @@ var connectors = [
         title: "Metamask",
         icon: Icon$O,
         connectorId: exports.ConnectorNames.Injected,
+        redirectUrl: "https://metamask.app.link/dapp/" + window.location.href.replace(/^https?:\/\//, ""),
     },
     {
         title: "TrustWallet",
@@ -2176,11 +2177,13 @@ var connectors = [
         title: "MathWallet",
         icon: Icon$P,
         connectorId: exports.ConnectorNames.Injected,
+        redirectUrl: "https://mathwallet.org/",
     },
     {
         title: "TokenPocket",
         icon: Icon$Q,
         connectorId: exports.ConnectorNames.Injected,
+        redirectUrl: "https://www.tokenpocket.pro/",
     },
     {
         title: "WalletConnect",
@@ -2204,6 +2207,8 @@ var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
     return (React__default['default'].createElement(Flex, { width: "100%", height: '40px', borderBottom: '1px solid #0d1b24', onClick: function () {
+            if (!window.ethereum && walletConfig.redirectUrl)
+                return;
             login(walletConfig.connectorId);
             window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
             onDismiss();
@@ -2219,7 +2224,8 @@ var HelpLink = styled__default['default'](Link)(templateObject_1$z || (templateO
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React__default['default'].createElement(Modal, { title: "Connect to a wallet", bodyPadding: "0 30px 30px 30px", hideSeparator: true, showWalletBack: true, onDismiss: onDismiss },
-        connectors.map(function (entry, index) { return (React__default['default'].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" })); }),
+        connectors.map(function (entry, index) { return (!window.ethereum && entry.redirectUrl ? (React__default['default'].createElement("a", { href: entry.redirectUrl, target: "_blank", rel: "noopener noreferrer" },
+            React__default['default'].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" }))) : (React__default['default'].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" }))); }),
         React__default['default'].createElement(HelpLink, { href: "https://t.me/kodakingofdogaltschat", external: true },
             React__default['default'].createElement(Icon$p, { color: "sidebarColor", fontSize: "16px", mr: "6px" }),
             "Need help connecting? Contact us")));
