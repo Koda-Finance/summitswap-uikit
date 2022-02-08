@@ -10,5 +10,5 @@ export interface Config {
     title: string;
     icon: FC<SvgProps>;
     connectorId: ConnectorNames;
-    redirectUrl?: string | undefined;
+    redirectUrl?: string;
 }

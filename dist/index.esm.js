@@ -2194,7 +2194,7 @@ var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
     return (React.createElement(Flex, { width: "100%", height: '40px', borderBottom: '1px solid #0d1b24', onClick: function () {
-            if (!window.ethereum && walletConfig.redirectUrl)
+            if (window.ethereum && walletConfig.redirectUrl)
                 return;
             login(walletConfig.connectorId);
             window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
