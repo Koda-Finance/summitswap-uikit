@@ -20,7 +20,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       height='40px'
       borderBottom='1px solid #0d1b24'
       onClick={() => {
-        if (window.ethereum && walletConfig.redirectUrl) return;
+        if (!window.ethereum && walletConfig.redirectUrl) return;
         login(walletConfig.connectorId);
         window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
