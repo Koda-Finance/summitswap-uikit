@@ -2172,37 +2172,33 @@ var connectors = [
         title: "TrustWallet",
         icon: Icon$R,
         connectorId: exports.ConnectorNames.WalletConnect,
-        redirectUrl: "",
     },
     {
         title: "MathWallet",
         icon: Icon$P,
         connectorId: exports.ConnectorNames.Injected,
-        redirectUrl: "mathwallet://mathwallet.org?action=link&value=" + window.location.href,
+        redirectUrl: "https://mathwallet.org/",
     },
     {
         title: "TokenPocket",
         icon: Icon$Q,
         connectorId: exports.ConnectorNames.Injected,
-        redirectUrl: "https://tokenpocket.github.io/applink?dappUrl=" + window.location.href,
+        redirectUrl: "https://www.tokenpocket.pro/",
     },
     {
         title: "WalletConnect",
         icon: Icon$S,
         connectorId: exports.ConnectorNames.WalletConnect,
-        redirectUrl: "",
     },
     {
         title: "Binance Chain Wallet",
         icon: Icon$T,
         connectorId: exports.ConnectorNames.BSC,
-        redirectUrl: "",
     },
     {
         title: "SafePal Wallet",
         icon: Icon$U,
         connectorId: exports.ConnectorNames.WalletConnect,
-        redirectUrl: "",
     },
 ];
 var connectorLocalStorageKey = "connectorId";
