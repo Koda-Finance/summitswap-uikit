@@ -1,5 +1,5 @@
 {
-  "name": "@summitswap/uikit",
+  "name": "@koda-finance/summitswap-uikit",
   "version": "1.0.0",
   "description": "Set of UI components for summitswap projects",
   "main": "dist/index.cjs.js",
