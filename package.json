@@ -1,6 +1,6 @@
 {
   "name": "@summitswap/uikit",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Set of UI components for summitswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
