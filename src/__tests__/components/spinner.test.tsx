@@ -10,8 +10,8 @@ it("renders correctly", () => {
         class="sc-gsTCUz khJLZs"
       >
         <svg
-          class="sc-bdfBwQ cuuOmQ sc-dlfnbm mabrO"
-          color="text"
+          class="sc-bdfBwQ ehUxwJ sc-dlfnbm mabrO"
+          color="primary"
           viewBox="0 0 128 128"
           width="64px"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +44,8 @@ it("renders correctly", () => {
           </svg>
         </svg>
         <svg
-          class="sc-bdfBwQ cuuOmQ sc-hKgILt jsGrON"
-          color="text"
+          class="sc-bdfBwQ ehUxwJ sc-hKgILt jsGrON"
+          color="primary"
           viewBox="0 0 256 256"
           width="128px"
           xmlns="http://www.w3.org/2000/svg"

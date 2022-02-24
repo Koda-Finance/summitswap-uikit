@@ -30,9 +30,8 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
   >
     {config.map((entry, index) => (
       !window.ethereum && entry.redirectUrl ? (
-        <a href={entry.redirectUrl} target="_blank" rel="noopener noreferrer">
+        <a key={entry.title} href={entry.redirectUrl} target="_blank" rel="noopener noreferrer">
           <WalletCard
-            key={entry.title}
             login={login}
             walletConfig={entry}
             onDismiss={onDismiss}
