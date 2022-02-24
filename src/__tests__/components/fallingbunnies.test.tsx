@@ -12,7 +12,6 @@ afterEach(() => {
 
 it("renders correctly", () => {
   const { asFragment } = renderWithTheme(<FallingBunnies count={1} />);
-  console.log(asFragment());
 
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
