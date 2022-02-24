@@ -1,29 +1,33 @@
-import React from 'react'
-import styled from "styled-components"
-import Flex from "../../../components/Box/Flex"
-import Box from "../../../components/Box/Box"
-import { SvgProps } from "../../../components/Svg"
-import * as IconModule from "../icons"
-import Logo from "../components/Logo"
-import UserBlock from "../components/UserBlock"
-import { HamburgerIcon } from "../icons"
-import { FacebookIcon, DiscordIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "../icons"
-import { Login } from "../../WalletModal/types"
-import { MENU_HEIGHT, MENU_HEIGHT_INCREASED } from '../config';
-import { CloseIcon } from '../../..'
-import CashState from './CashState'
-import LangSelector from './LangSelector'
-import { MenuEntry, LinkLabel } from "../components/MenuEntry"
-import MenuLink from "../components/MenuLink"
-import Accordion from "./Accordion"
-import { PanelProps, PushedProps } from "../types"
+import React from "react";
+import styled from "styled-components";
+import Flex from "../../../components/Box/Flex";
+import Box from "../../../components/Box/Box";
+import { SvgProps } from "../../../components/Svg";
+import * as IconModule from "../icons";
+import Logo from "../components/Logo";
+import UserBlock from "../components/UserBlock";
+import { HamburgerIcon } from "../icons";
+import {
+  FacebookIcon,
+  DiscordIcon,
+  InstagramIcon,
+  TelegramIcon,
+  TwitterIcon,
+} from "../icons";
+import { Login } from "../../WalletModal/types";
+import { MENU_HEIGHT, MENU_HEIGHT_INCREASED } from "../config";
+import { CloseIcon } from "../../..";
+import CashState from "./CashState";
+import LangSelector from "./LangSelector";
+import { MenuEntry, LinkLabel } from "../components/MenuEntry";
+import MenuLink from "../components/MenuLink";
+import Accordion from "./Accordion";
+import { NavProps, PushedProps } from "../types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends NavProps, PushedProps {
   open: any;
   setOpen: any;
   account?: string;
-  login: Login;
-  logout: () => void;
   showMenu?: any;
   isMobile: boolean;
 }
@@ -43,6 +47,7 @@ const Topbar: React.FC<Props> = ({
   setLang,
   pushNav,
   links,
+  showConnectButton,
 }) => {
   return (
     <Flex flexDirection="column">
@@ -50,7 +55,9 @@ const Topbar: React.FC<Props> = ({
         <Flex minWidth="85%" justifyContent="space-between" alignItems="center">
           <Logo />
           <ConnectAction justifyContent="flex-end" alignItems="center">
-            <UserBlock account={account} login={login} logout={logout} />
+            {showConnectButton && (
+              <UserBlock account={account} login={login} logout={logout} />
+            )}
             {!open ? (
               <HamburgerIcon
                 ml="5px"
@@ -91,11 +98,11 @@ const Topbar: React.FC<Props> = ({
             ) : null}
           </SettingsEntry>
           <SocialEntry>
-            <DiscordIcon />
-            <TelegramIcon />
-            <FacebookIcon />
-            <TwitterIcon />
-            <InstagramIcon />
+            <a href="https://discord.com/invite/FBgEmJmHuc"><DiscordIcon /></a>
+            <a href="https://t.me/kodakingofdogaltschat"><TelegramIcon /></a>
+            <a href="https://www.facebook.com/KodaCryptocurrency"><FacebookIcon /></a>
+            <a href="https://twitter.com/CoinKoda"><TwitterIcon /></a>
+            <a href="https://www.instagram.com/kodacryptocurrency"><InstagramIcon /></a>
           </SocialEntry>
         </SettingSocial>
         <EntryScroll minWidth="85%" padding="20px 0px">
@@ -208,13 +215,13 @@ const SocialEntry = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  > svg {
+  > a {
     cursor: pointer;
     width: 20px;
     height: 20px;
     fill: ${({ theme }) => theme.colors.sidebarColor};
   }
-  > svg + svg {
+  > a + a {
     margin-left: 5px;
   }
 `;

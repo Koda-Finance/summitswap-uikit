@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { PanelProps, PushedProps } from "../types";
 import { Login } from "../../WalletModal/types";
 interface Props extends PanelProps, PushedProps {
@@ -7,8 +7,7 @@ interface Props extends PanelProps, PushedProps {
     account?: string;
     login: Login;
     logout: () => void;
-    setIsConnectButtonShown: Dispatch<SetStateAction<boolean>>;
-    isConnectButtonShown: boolean;
+    showConnectButton: boolean;
 }
 declare const Panel: React.FC<Props>;
 export default Panel;
