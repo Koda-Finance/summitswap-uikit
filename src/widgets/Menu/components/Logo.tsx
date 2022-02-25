@@ -8,7 +8,9 @@ interface Props {
 const Logo: React.FC<Props> = ({ }) => {
   return (
     <StyledContainer>
-      <LogoTextIcon />
+      <a href="/">
+        <LogoTextIcon />
+      </a>
     </StyledContainer>
   );
 };
