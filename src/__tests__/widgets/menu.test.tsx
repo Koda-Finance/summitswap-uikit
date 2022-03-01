@@ -56,7 +56,6 @@ it("renders correctly", () => {
         <div
           class="sc-dlfnbm sc-hKgILt isWJdv AmOVA"
         >
-          <nav
             class="sc-dacFzL joTRHM"
           >
             <div
