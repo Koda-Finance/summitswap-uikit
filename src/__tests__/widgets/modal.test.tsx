@@ -31,7 +31,7 @@ it("renders correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-jSgupP eAzziZ sc-gKsewC kpTpvg"
+            class="sc-jSgupP eJngmZ sc-gKsewC kpTpvg"
             scale="md"
             style="justify-content: flex-end;"
           >

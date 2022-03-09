@@ -31,7 +31,7 @@ it("renders ConnectModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-gKsewC fZmjvs sc-iBPRYJ ifcXSU"
+            class="sc-gKsewC fHkRgE sc-iBPRYJ ifcXSU"
             scale="md"
             style="justify-content: flex-end;"
           >
@@ -528,7 +528,7 @@ it("renders AccountModal correctly", () => {
           </div>
           <button
             aria-label="Close the dialog"
-            class="sc-gKsewC fZmjvs sc-iBPRYJ ifcXSU"
+            class="sc-gKsewC fHkRgE sc-iBPRYJ ifcXSU"
             scale="md"
             style="justify-content: flex-end;"
           >
@@ -614,7 +614,7 @@ it("renders AccountModal correctly", () => {
             class="sc-eCssSg sc-jSgupP jnvqfy fvYwlu"
           >
             <button
-              class="sc-gKsewC bxwCgD"
+              class="sc-gKsewC fSfEcT"
               scale="sm"
             >
               Logout
