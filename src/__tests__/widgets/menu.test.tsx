@@ -78,7 +78,7 @@ it("renders correctly", () => {
               >
                 <div>
                   <button
-                    class="sc-gsTCUz bFLUht"
+                    class="sc-gsTCUz hVfOoN"
                     scale="sm"
                   >
                     0xbd...c980
@@ -277,7 +277,7 @@ it("renders correctly", () => {
                 class="sc-dlfnbm sc-hKgILt isWJdv hhgqpc"
               >
                 <button
-                  class="sc-gsTCUz bFLUht"
+                  class="sc-gsTCUz hVfOoN"
                   scale="sm"
                 >
                   0xbd...c980
