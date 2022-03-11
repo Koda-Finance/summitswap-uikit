@@ -5,8 +5,10 @@ on:
     branches: [ "feat/auto-publish" ]
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
+    - env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - name: clone repo
         uses: actions/checkout@v2
@@ -22,9 +24,6 @@ jobs:
 
       - name: build
         run: CI=false yarn build
-
-      - env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: publish package
         run: npm publish
