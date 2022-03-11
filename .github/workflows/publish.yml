@@ -2,7 +2,7 @@ name: publish package
 
 on:
   push:
-    branches: [ "feat/auto-publish" ]
+    branches: [ "main" ]
 
 jobs:
   publish:
