@@ -5,10 +5,10 @@ on:
     branches: [ "feat/auto-publish" ]
 
 jobs:
-  publish:
+  publish_job:
     runs-on: ubuntu-latest
-    - env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - name: clone repo
         uses: actions/checkout@v2
