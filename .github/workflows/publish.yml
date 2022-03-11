@@ -1,0 +1,30 @@
+name: publish package
+
+on:
+  push:
+    branches: [ "feat/auto-publish" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone repo
+        uses: actions/checkout@v2
+
+      - name: setup node 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "yarn"
+
+      - name: install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: build
+        run: CI=false yarn build
+
+      - env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: publish package
+        run: npm publish
