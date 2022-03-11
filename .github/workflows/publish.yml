@@ -2,10 +2,10 @@ name: publish package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feat/auto-publish" ]
 
 jobs:
-  publish_job:
+  publish:
     runs-on: ubuntu-latest
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -24,6 +24,9 @@ jobs:
 
       - name: build
         run: CI=false yarn build
+
+      - name: config npm token
+        run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
 
       - name: publish package
         run: npm publish
