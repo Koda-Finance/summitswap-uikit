@@ -27,3 +27,4 @@ export { default as TrustScoresIcon } from "./TrustScores";
 export { default as TwitterIcon } from "./Twitter";
 export { default as RubicIcon } from "./Rubic";
 export { default as ReferralIcon } from "./Referral";
+export { default as OnboardingIcon } from "./Onboarding";
