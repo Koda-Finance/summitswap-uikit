@@ -18,7 +18,7 @@ const connectors: Config[] = [
     title: "TrustWallet",
     icon: TrustWallet,
     connectorId: ConnectorNames.Injected,
-    redirectUrl: `https://link.trustwallet.com/`
+    redirectUrl: `https://trustwallet.com/dapp`
   },
   {
     title: "MathWallet",
