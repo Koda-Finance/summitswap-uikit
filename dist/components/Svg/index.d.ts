@@ -28,6 +28,7 @@ export { default as ListViewIcon } from "./Icons/ListView";
 export { default as LogoIcon } from "./Icons/Logo";
 export { default as LogoTextIcon } from "./Icons/LogoText";
 export { default as LogoRoundIcon } from "./Icons/LogoRound";
+export { default as MetamaskIcon } from "./Icons/Metamask";
 export { default as MinusIcon } from "./Icons/Minus";
 export { default as NoProfileAvatarIcon } from "./Icons/NoProfileAvatar";
 export { default as OmniIcon } from "./Icons/Omni";
