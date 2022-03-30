@@ -206,7 +206,7 @@ it("renders ConnectModal correctly", () => {
             </div>
           </a>
           <a
-            href="https://link.trustwallet.com/"
+            href="https://trustwallet.com/dapp"
             rel="noopener noreferrer"
             target="_blank"
           >
