@@ -24,9 +24,11 @@ const Container = styled.div`
 
 const SettingsEntry = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
+  margin-bottom: calc(${MENU_ENTRY_HEIGHT}px + 5px)
 `;
 
 const SocialEntry = styled.div`
@@ -73,7 +75,8 @@ const PanelFooter: React.FC<Props> = ({
         <SocialLinks />
       </SocialEntry> */}
       <SettingsEntry>
-        <CashState kodaPriceUsd={kodaPriceUsd} />
+        <CashState kodaPriceUsd={kodaPriceUsd} token={"KODA"}/>
+        <CashState kodaPriceUsd={kodaPriceUsd} token={"KAPEX"} />
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
         {(currentLang && langs?.length && setLang) ? 
               (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null}  
