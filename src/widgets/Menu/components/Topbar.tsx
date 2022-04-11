@@ -88,7 +88,8 @@ const Topbar: React.FC<Props> = ({
           alignItems="center"
         >
           <SettingsEntry>
-            <CashState kodaPriceUsd={kodaPriceUsd} />
+            <CashState kodaPriceUsd={kodaPriceUsd} token={"KODA"}/>
+            <CashState kodaPriceUsd={kodaPriceUsd} token={"KAPEX"} />
             {currentLang && langs?.length && setLang ? (
               <LangSelector
                 currentLang={currentLang}
@@ -206,6 +207,7 @@ const EntryScroll = styled(Box)`
 
 const SettingsEntry = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 `;
