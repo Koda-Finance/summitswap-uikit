@@ -14,7 +14,7 @@ const CashState: React.FC<Props> = ({kodaPriceUsd, token}) => {
             {token == 'KODA' && <KodaLogoIcon />}
             {token == 'KAPEX' && <KapexLogoIcon />}
             {kodaPriceUsd ? (
-                <Box>{`$${kodaPriceUsd}`}</Box>
+                <Box>{`$${kodaPriceUsd.toFixed(8)}`}</Box>
             ) : (
                 <Skeleton width={100} height={24} />
             )}
