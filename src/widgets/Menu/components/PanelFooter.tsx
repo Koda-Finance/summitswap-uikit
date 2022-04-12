@@ -54,6 +54,7 @@ const PanelFooter: React.FC<Props> = ({
   isDark,
   cakePriceUsd,
   kodaPriceUsd,
+  kapexPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -76,7 +77,7 @@ const PanelFooter: React.FC<Props> = ({
       </SocialEntry> */}
       <SettingsEntry>
         <CashState kodaPriceUsd={kodaPriceUsd} token={"KODA"}/>
-        <CashState kodaPriceUsd={kodaPriceUsd} token={"KAPEX"} />
+        <CashState kodaPriceUsd={kapexPriceUsd} token={"KAPEX"} />
         {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
         {(currentLang && langs?.length && setLang) ? 
               (<LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />) : null}  
