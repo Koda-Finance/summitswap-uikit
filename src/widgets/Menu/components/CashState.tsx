@@ -4,17 +4,17 @@ import { Box } from '../../../components/Box'
 import Skeleton from "../../../components/Skeleton/Skeleton"
 
 interface Props {
-    kodaPriceUsd?: number;
+    coinPriceUsd?: number;
     token: string;
 }
 
-const CashState: React.FC<Props> = ({kodaPriceUsd, token}) => {
+const CashState: React.FC<Props> = ({coinPriceUsd, token}) => {
     return (
         <StyledContainer>
             {token == 'KODA' && <KodaLogoIcon />}
             {token == 'KAPEX' && <KapexLogoIcon />}
-            {kodaPriceUsd ? (
-                <Box>{`$${kodaPriceUsd}`}</Box>
+            {coinPriceUsd ? (
+                <Box>{`$${coinPriceUsd}`}</Box>
             ) : (
                 <Skeleton width={100} height={24} />
             )}

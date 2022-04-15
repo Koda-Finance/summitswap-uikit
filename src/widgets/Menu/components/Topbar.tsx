@@ -42,6 +42,7 @@ const Topbar: React.FC<Props> = ({
   login,
   logout,
   kodaPriceUsd,
+  kapexPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -88,8 +89,8 @@ const Topbar: React.FC<Props> = ({
           alignItems="center"
         >
           <SettingsEntry>
-            <CashState kodaPriceUsd={kodaPriceUsd} token={"KODA"}/>
-            <CashState kodaPriceUsd={kodaPriceUsd} token={"KAPEX"} />
+            <CashState coinPriceUsd={kodaPriceUsd} token={"KODA"}/>
+            <CashState coinPriceUsd={kapexPriceUsd} token={"KAPEX"} />
             {currentLang && langs?.length && setLang ? (
               <LangSelector
                 currentLang={currentLang}
