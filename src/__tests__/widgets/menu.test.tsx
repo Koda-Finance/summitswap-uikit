@@ -40,6 +40,7 @@ it("renders correctly", () => {
         currentLang=""
         cakePriceUsd={0.23158668932877668}
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         links={menuConfig}
         showConnectButton={true}
       >
