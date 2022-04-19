@@ -30,6 +30,7 @@ const useProps = () => {
     currentLang: null,
     cakePriceUsd: 0.023158668932877668,
     kodaPriceUsd: 0,
+    kapexPriceUsd: 0,
     links,
     profile: null,
   });
@@ -47,6 +48,7 @@ const useProps = () => {
         currentLang: null,
         cakePriceUsd: 0.023158668932877668,
         kodaPriceUsd: 0.00091815,
+        kapexPriceUsd: 0.0000004759,
         links,
         profile: null,
       });
@@ -100,6 +102,7 @@ export const NotConnected: React.FC = () => {
         setLang={noop}
         currentLang=""
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         links={links}
       >
         <div>
@@ -133,6 +136,7 @@ export const WithNoProfile: React.FC = () => {
         currentLang=""
         cakePriceUsd={0.23158668932877668}
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         links={links}
         profile={{
           profileLink: "/profile",
@@ -176,6 +180,7 @@ export const WithProfile: React.FC = () => {
         currentLang=""
         cakePriceUsd={0.23158668932877668}
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         links={links}
         profile={{
           username: "pancakeswap",
@@ -217,6 +222,7 @@ export const WithNoLanguage: React.FC = () => {
         toggleTheme={noop}
         cakePriceUsd={0.23158668932877668}
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         setLang={(): void => undefined}
         currentLang=''
         langs={[]}
@@ -274,6 +280,7 @@ export const WithSubmenuSelected: React.FC = () => {
         currentLang=""
         cakePriceUsd={0.23158668932877668}
         kodaPriceUsd={0.00091815}
+        kapexPriceUsd={0.0000004759}
         links={links}
         profile={{
           username: "pancakeswap",
