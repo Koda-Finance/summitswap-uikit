@@ -125,10 +125,10 @@ it("renders correctly", () => {
                     class="sc-gGmIRh bgJSbB"
                   />
                   <div
-                    class="sc-cBNfnY sc-citwmv ewsxgx dpuRIZ"
-                    height="24"
-                    width="100"
-                  />
+                    class="sc-dlfnbm isWJdv"
+                  >
+                    $0.00000048
+                  </div>
                 </div>
               </div>
               <div
@@ -356,10 +356,10 @@ it("renders correctly", () => {
                       class="sc-gGmIRh bgJSbB"
                     />
                     <div
-                      class="sc-cBNfnY sc-citwmv ewsxgx dpuRIZ"
-                      height="24"
-                      width="100"
-                    />
+                      class="sc-dlfnbm isWJdv"
+                    >
+                      $0.00000048
+                    </div>
                   </div>
                 </div>
                 <div
