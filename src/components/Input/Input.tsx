@@ -8,7 +8,11 @@ interface StyledInputProps extends InputProps {
 /**
  * Priority: Warning --> Success
  */
-const getBoxShadow = ({ isSuccess = false, isWarning = false, theme }: StyledInputProps) => {
+const getBoxShadow = ({
+  isSuccess = false,
+  isWarning = false,
+  theme,
+}: StyledInputProps) => {
   if (isWarning) {
     return theme.shadows.warning;
   }
@@ -44,6 +48,11 @@ const Input = styled.input<InputProps>`
   outline: 0;
   padding: 0 16px;
   width: 100%;
+  
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.textSubtle};
