@@ -206,7 +206,7 @@ it("renders ConnectModal correctly", () => {
             </div>
           </a>
           <a
-            href="https://trustwallet.com/dapp"
+            href="https://link.trustwallet.com/open_url?coin_id=20000714&url=https://summitswap.finance/"
             rel="noopener noreferrer"
             target="_blank"
           >
