@@ -259,7 +259,7 @@ it("renders ConnectModal correctly", () => {
             </div>
           </a>
           <a
-            href="https://mathwallet.org/"
+            href="mathwallet://mathwallet.org?action=link&value=https://summitswap.finance/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -300,50 +300,44 @@ it("renders ConnectModal correctly", () => {
               </svg>
             </div>
           </a>
-          <a
-            href="https://www.tokenpocket.pro/"
-            rel="noopener noreferrer"
-            target="_blank"
+          <div
+            class="sc-eCssSg sc-jSgupP gFjHkH gUnLti"
+            height="40px"
+            id="wallet-connect-tokenpocket"
+            style="cursor: pointer;"
+            width="100%"
           >
             <div
-              class="sc-eCssSg sc-jSgupP gFjHkH gUnLti"
-              height="40px"
-              id="wallet-connect-tokenpocket"
-              style="cursor: pointer;"
-              width="100%"
+              class="sc-bdfBwQ fQyDDg"
+              color="sidebarColor"
+              font-size="16px"
+              font-weight="600"
             >
-              <div
-                class="sc-bdfBwQ fQyDDg"
-                color="sidebarColor"
-                font-size="16px"
-                font-weight="600"
-              >
-                TokenPocket
-              </div>
-              <svg
-                class="sc-dlfnbm gUBFkO"
-                color="primary"
-                viewBox="0 0 96 96"
-                width="32px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="48"
-                  cy="48"
-                  fill="white"
-                  r="48"
-                />
-                <path
-                  d="M44.3288 35.3546V21.7134H19.0926C18.581 21.7134 18.24 22.0544 18.24 22.566V41.8342C18.24 42.3457 18.581 42.6867 19.0926 42.6867H28.8119V77.8129C28.8119 78.3244 29.153 78.6654 29.6645 78.6654H45.5224C46.0339 78.6654 46.375 78.3244 46.375 77.8129V35.3546H44.3288Z"
-                  fill="#29AEFF"
-                />
-                <path
-                  d="M61.8919 17.2798H55.7534H39.2134C38.7019 17.2798 38.3608 17.6208 38.3608 18.1324V73.3792C38.3608 73.8908 38.7019 74.2318 39.2134 74.2318H55.0713C55.5829 74.2318 55.9239 73.8908 55.9239 73.3792V59.397H62.0624C73.6575 59.397 83.0358 50.0187 83.0358 38.4237C83.0358 26.6581 73.487 17.2798 61.8919 17.2798Z"
-                  fill="#2761E7"
-                />
-              </svg>
+              TokenPocket
             </div>
-          </a>
+            <svg
+              class="sc-dlfnbm gUBFkO"
+              color="primary"
+              viewBox="0 0 96 96"
+              width="32px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="48"
+                cy="48"
+                fill="white"
+                r="48"
+              />
+              <path
+                d="M44.3288 35.3546V21.7134H19.0926C18.581 21.7134 18.24 22.0544 18.24 22.566V41.8342C18.24 42.3457 18.581 42.6867 19.0926 42.6867H28.8119V77.8129C28.8119 78.3244 29.153 78.6654 29.6645 78.6654H45.5224C46.0339 78.6654 46.375 78.3244 46.375 77.8129V35.3546H44.3288Z"
+                fill="#29AEFF"
+              />
+              <path
+                d="M61.8919 17.2798H55.7534H39.2134C38.7019 17.2798 38.3608 17.6208 38.3608 18.1324V73.3792C38.3608 73.8908 38.7019 74.2318 39.2134 74.2318H55.0713C55.5829 74.2318 55.9239 73.8908 55.9239 73.3792V59.397H62.0624C73.6575 59.397 83.0358 50.0187 83.0358 38.4237C83.0358 26.6581 73.487 17.2798 61.8919 17.2798Z"
+                fill="#2761E7"
+              />
+            </svg>
+          </div>
           <div
             class="sc-eCssSg sc-jSgupP gFjHkH gUnLti"
             height="40px"
