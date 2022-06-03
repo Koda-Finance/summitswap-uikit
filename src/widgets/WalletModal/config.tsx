@@ -17,20 +17,20 @@ const connectors: Config[] = [
   {
     title: "TrustWallet",
     icon: TrustWallet,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.WalletConnect,
     redirectUrl: `https://link.trustwallet.com/open_url?coin_id=20000714&url=https://summitswap.finance/`
   },
   {
     title: "MathWallet",
     icon: MathWallet,
-    connectorId: ConnectorNames.Injected,
-    redirectUrl: `https://mathwallet.org/`,
+    connectorId: ConnectorNames.WalletConnect,
+    redirectUrl: `mathwallet://mathwallet.org?action=link&value=https://summitswap.finance/`,
   },
   {
     title: "TokenPocket",
     icon: TokenPocket,
-    connectorId: ConnectorNames.Injected,
-    redirectUrl: `https://www.tokenpocket.pro/`,
+    connectorId: ConnectorNames.WalletConnect,
+    redirectUrl: `https://tokenpocket.github.io/applink?dappUrl=Your_Dapp_Url`,
   },
   {
     title: "WalletConnect",
