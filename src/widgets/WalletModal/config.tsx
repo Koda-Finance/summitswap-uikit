@@ -30,7 +30,7 @@ const connectors: Config[] = [
     title: "TokenPocket",
     icon: TokenPocket,
     connectorId: ConnectorNames.WalletConnect,
-    redirectUrl: `https://tokenpocket.github.io/applink?dappUrl=https://summitswap.finance/`,
+    // redirectUrl: `https://tokenpocket.github.io/applink?dappUrl=https://summitswap.finance/`, Sends to Apple store even in Android
   },
   {
     title: "WalletConnect",
