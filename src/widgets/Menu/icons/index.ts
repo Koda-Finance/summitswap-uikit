@@ -29,3 +29,5 @@ export { default as RubicIcon } from "./Rubic";
 export { default as ReferralIcon } from "./Referral";
 export { default as OnboardingIcon } from "./Onboarding";
 export { default as StakingIcon } from "./Staking";
+export { default as CreateTokenIcon } from "./CreateToken";
+export { default as CreatePresaleIcon } from "./CreatePresale";
