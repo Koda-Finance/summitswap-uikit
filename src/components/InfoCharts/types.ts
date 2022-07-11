@@ -19,3 +19,36 @@ export type PriceChartEntry = {
   high: number;
   low: number;
 };
+
+export type ChartEntry = {
+  date: number;
+  volumeUSD: number;
+  liquidityUSD: number;
+};
+
+export type TokenData = {
+  exists: boolean
+
+  name: string
+  symbol: string
+  address: string
+
+  volumeUSD: number
+  volumeUSDChange: number
+  volumeUSDWeek: number
+  txCount: number
+
+  liquidityToken: number
+  liquidityUSD: number
+  liquidityUSDChange: number
+
+  priceUSD: number
+  priceUSDChange: number
+  priceUSDChangeWeek: number
+};
+
+export enum ChartView {
+  LIQUIDITY,
+  VOLUME,
+  PRICE,
+};
