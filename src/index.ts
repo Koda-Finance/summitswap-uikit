@@ -4,6 +4,7 @@ export * from "./components/Box";
 export * from "./components/Breadcrumbs";
 export * from "./components/Button";
 export * from "./components/ButtonMenu";
+export * from "./components/ChartLoaders";
 export * from "./components/Card";
 export * from "./components/Checkbox";
 export * from "./components/Dropdown";
