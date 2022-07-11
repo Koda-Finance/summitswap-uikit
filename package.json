@@ -41,6 +41,7 @@
     "@storybook/react": "^6.1.18",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.5",
+    "@types/numeral": "^2.0.2",
     "@types/react": "^17.0.2",
     "@types/react-router-dom": "^5.1.6",
     "@types/react-transition-group": "^4.4.0",
@@ -76,6 +77,7 @@
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
+    "numeral": "^2.0.6",
     "react-transition-group": "^4.4.1",
     "recharts": "^2.1.12",
     "styled-system": "^5.1.5"
