@@ -41,18 +41,16 @@ export const BarChart: React.FC = () => {
   const [volumeDateHover, setVolumeDateHover] = useState<string | undefined>();
 
   return (
-    <>
-      <Box height="250px">
-        <Text>Date: {volumeDateHover ?? endTime}</Text>
-        <BarChartComponent
-          data={chartData}
-          setHoverValue={setVolumeHover}
-          setHoverDate={setVolumeDateHover}
-        />
-        {volumeHover && (
-          <Text>Volume: {volumeHover}</Text>
-        )}
-      </Box>
-    </>
+    <Box height="250px">
+      <Text>Date: {volumeDateHover ?? endTime}</Text>
+      <BarChartComponent
+        data={chartData}
+        setHoverValue={setVolumeHover}
+        setHoverDate={setVolumeDateHover}
+      />
+      {volumeHover && (
+        <Text>Volume: {volumeHover}</Text>
+      )}
+    </Box>
   );
 };

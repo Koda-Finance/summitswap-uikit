@@ -12,30 +12,24 @@ export default {
 
 export const BarChartLoader: React.FC = () => {
   return (
-    <>
-      <Box mb="32px">
-        <BarChartLoaderComponent width={600} color="white" />
-      </Box>
-    </>
+    <Box>
+      <BarChartLoaderComponent width={600} color="white" />
+    </Box>
   );
 };
 
 export const CandleChartLoader: React.FC = () => {
   return (
-    <>
-      <Box mb="32px">
-        <CandleChartLoaderComponent width={600} />
-      </Box>
-    </>
+    <Box>
+      <CandleChartLoaderComponent width={600} />
+    </Box>
   );
 };
 
 export const LineChartLoader: React.FC = () => {
   return (
-    <>
-      <Box mb="32px">
-        <LineChartLoaderComponent width={600} />
-      </Box>
-    </>
+    <Box>
+      <LineChartLoaderComponent width={600} />
+    </Box>
   );
 };
