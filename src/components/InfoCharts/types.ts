@@ -11,3 +11,11 @@ export type ChartData = {
   time: Date;
   value: number;
 };
+
+export type PriceChartEntry = {
+  time: number;
+  open: number;
+  close: number;
+  high: number;
+  low: number;
+};

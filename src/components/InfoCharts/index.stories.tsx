@@ -8,6 +8,7 @@ import { ChartData } from "./types";
 import { fromUnixTime } from "date-fns";
 import { Text } from "../Text";
 import getLocale from "../../util/getLocale";
+import { priceData } from "./data";
 
 export default {
   title: "Components/Info Charts",
@@ -90,6 +91,27 @@ export const LineChart: React.FC = () => {
       />
       {volumeHover && (
         <Text>Volume: {volumeHover}</Text>
+      )}
+    </Box>
+  )
+}
+
+export const CandleChart: React.FC = () => {
+  const endTime = fromUnixTime(priceData[priceData.length - 1].time).toLocaleString();
+
+  const [value, setValue] = useState<number | undefined>();
+  const [label, setLabel] = useState<string | undefined>();
+
+  return (
+    <Box height="250px">
+      <Text>Label: {label ?? endTime}</Text>
+      <CandleChartComponent
+        data={priceData}
+        setValue={setValue}
+        setLabel={setLabel}
+      />
+      {value && (
+        <Text>Value: {value}</Text>
       )}
     </Box>
   )
