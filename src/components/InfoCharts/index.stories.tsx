@@ -54,3 +54,43 @@ export const BarChart: React.FC = () => {
     </Box>
   );
 };
+
+export const LineChart: React.FC = () => {
+  const minValue = 10;
+  const maxValue = 100;
+  const endTimestamp = Math.floor(Date.now() / 1000);
+  const startTimestamp = endTimestamp - 60 * 60 * 24 * 7;
+
+  const locale = getLocale();
+  const endTime = fromUnixTime(endTimestamp).toLocaleString(locale, {
+    year: "numeric",
+    day: "numeric",
+    month: "short",
+  });
+  
+  const chartData: ChartData[] = useMemo(() => {
+    return [...Array(18)].map(() => {
+      return {
+        time: fromUnixTime(random(startTimestamp, endTimestamp, false)),
+        value: random(minValue, maxValue, true),
+      };
+    })
+  }, []);
+
+  const [volumeHover, setVolumeHover] = useState<number | undefined>();
+  const [volumeDateHover, setVolumeDateHover] = useState<string | undefined>();
+
+  return (
+    <Box height="250px">
+      <Text>Date: {volumeDateHover ?? endTime}</Text>
+      <LineChartComponent
+        data={chartData}
+        setHoverValue={setVolumeHover}
+        setHoverDate={setVolumeDateHover}
+      />
+      {volumeHover && (
+        <Text>Volume: {volumeHover}</Text>
+      )}
+    </Box>
+  )
+}
