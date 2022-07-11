@@ -77,6 +77,7 @@
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
     "react-transition-group": "^4.4.1",
+    "recharts": "^2.1.12",
     "styled-system": "^5.1.5"
   }
 }
