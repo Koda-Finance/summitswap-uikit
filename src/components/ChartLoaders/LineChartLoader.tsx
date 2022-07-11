@@ -1,7 +1,7 @@
 import React from 'react'
 import { Svg, SvgProps } from '../Svg'
 
-const LineChartLoaderSVG: React.FC<SvgProps> = (props) => {
+const LineChartLoader: React.FC<SvgProps> = (props) => {
   return (
     <Svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 100 50" {...props}>
       <path
@@ -57,4 +57,4 @@ const LineChartLoaderSVG: React.FC<SvgProps> = (props) => {
   )
 }
 
-export default LineChartLoaderSVG
+export default LineChartLoader;

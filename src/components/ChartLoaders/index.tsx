@@ -1,3 +1,3 @@
-export { default as BarChartLoaderSVG } from "./BarChartLoaderSVG";
-export { default as CandleChartLoaderSVG } from "./CandleChartLoaderSVG";
-export { default as LineChartLoaderSVG } from "./LineChartLoaderSVG";
+export { default as BarChartLoader } from "./BarChartLoader";
+export { default as CandleChartLoader } from "./CandleChartLoader";
+export { default as LineChartLoader } from "./LineChartLoader";
