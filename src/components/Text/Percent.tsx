@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Text from "./Text";
 import { PercentProps } from "./types";
 
@@ -7,7 +7,7 @@ const Percent: React.FC<PercentProps> = ({ value, ...rest }) => {
     return <Text {...rest}>-</Text>;
   }
 
-  const isNegative = value < 0;
+  const isNegative = useMemo(() => value < 0, [value]);
 
   return (
     <Text {...rest} color={isNegative ? "failure" : "success"}>
