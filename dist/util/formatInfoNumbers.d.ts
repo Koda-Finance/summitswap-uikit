@@ -1,5 +1,5 @@
 export declare const getFirstThreeNonZeroDecimals: (value: number) => string;
-export declare type formatAmountNotation = 'compact' | 'standard';
+export declare type formatAmountNotation = "compact" | "standard";
 /**
  * This function is used to format token prices, liquidity, amount of tokens in TX, and in general any numbers on info section
  * @param amount - amount to be formatted
