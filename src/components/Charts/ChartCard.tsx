@@ -1,16 +1,16 @@
-import React, { useMemo, useState } from "react";
-import LineChart from "./LineChart";
-import BarChart from "./BarChart";
 import { fromUnixTime } from "date-fns";
-import CandleChart from "./CandleChart";
-import { Text } from "../Text";
-import { Card } from "../Card";
-import { Box, Flex } from "../Box";
-import getLocale from "../../util/getLocale";
+import React, { useMemo, useState } from "react";
 import { formatAmount } from "../../util/formatInfoNumbers";
+import getLocale from "../../util/getLocale";
+import { Box, Flex } from "../Box";
+import { Card } from "../Card";
 import { Skeleton } from "../Skeleton";
-import { ChartEntry, PriceChartEntry, TokenData, ChartView } from "./types";
 import { TabToggle, TabToggleGroup } from "../Tab";
+import { Text } from "../Text";
+import BarChart from "./BarChart";
+import CandleChart from "./CandleChart";
+import LineChart from "./LineChart";
+import { ChartEntry, ChartView, PriceChartEntry, TokenData } from "./types";
 
 interface ChartCardProps {
   variant: "pool" | "token";

@@ -1,5 +1,4 @@
 import { format } from "date-fns";
-import { useTheme } from "styled-components";
 import { createChart, IChartApi } from "lightweight-charts";
 import React, {
   Dispatch,
@@ -9,6 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { useTheme } from "styled-components";
 import getLocale from "../../util/getLocale";
 import { CandleChartLoader } from "../ChartLoaders";
 

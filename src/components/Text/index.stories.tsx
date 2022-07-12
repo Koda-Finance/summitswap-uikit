@@ -1,7 +1,7 @@
 import React from "react";
-import TextComponent from "./Text";
-import PercentComponent from "./Percent";
 import { Box } from "../Box";
+import PercentComponent from "./Percent";
+import TextComponent from "./Text";
 
 export default {
   title: "Components/Text",
@@ -30,7 +30,10 @@ export default {
     color: {
       name: "color",
       table: {
-        type: { summary: "string", detail: "Color from the theme, or CSS color" },
+        type: {
+          summary: "string",
+          detail: "Color from the theme, or CSS color",
+        },
         defaultValue: { summary: "theme.colors.text" },
       },
       control: {
@@ -62,16 +65,16 @@ export const Percent: React.FC = () => {
     <div>
       <Box display="flex">
         <TextComponent mr={20}>8.23 Percent:</TextComponent>
-        <PercentComponent value={8.23} />  
+        <PercentComponent value={8.23} />
       </Box>
       <Box display="flex">
         <TextComponent mr={20}>0.00 Percent:</TextComponent>
-        <PercentComponent value={0.00} />  
+        <PercentComponent value={0.0} />
       </Box>
       <Box display="flex">
         <TextComponent mr={20}>-8.12 Percent:</TextComponent>
-        <PercentComponent value={-8.12} />  
+        <PercentComponent value={-8.12} />
       </Box>
     </div>
   );
-}
+};

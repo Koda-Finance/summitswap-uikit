@@ -9,5 +9,5 @@ export interface TextProps extends SpaceProps, TypographyProps {
 }
 
 export interface PercentProps extends TextProps {
-  value: number | undefined
+  value: number | undefined;
 }

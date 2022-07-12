@@ -27,28 +27,28 @@ export type ChartEntry = {
 };
 
 export type TokenData = {
-  exists: boolean
+  exists: boolean;
 
-  name: string
-  symbol: string
-  address: string
+  name: string;
+  symbol: string;
+  address: string;
 
-  volumeUSD: number
-  volumeUSDChange: number
-  volumeUSDWeek: number
-  txCount: number
+  volumeUSD: number;
+  volumeUSDChange: number;
+  volumeUSDWeek: number;
+  txCount: number;
 
-  liquidityToken: number
-  liquidityUSD: number
-  liquidityUSDChange: number
+  liquidityToken: number;
+  liquidityUSD: number;
+  liquidityUSDChange: number;
 
-  priceUSD: number
-  priceUSDChange: number
-  priceUSDChangeWeek: number
+  priceUSD: number;
+  priceUSDChange: number;
+  priceUSDChangeWeek: number;
 };
 
 export enum ChartView {
   LIQUIDITY,
   VOLUME,
   PRICE,
-};
+}

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Box } from "../Box";
-import { ChartView } from "../InfoCharts/types";
+import { ChartView } from "../Charts/types";
 import { Text } from "../Text";
-import { TabToggle as TabToggleComponent, TabToggleGroup as TabToggleGroupComponent} from "./TabToggle";
+import {
+  TabToggle as TabToggleComponent,
+  TabToggleGroup as TabToggleGroupComponent
+} from "./TabToggle";
 
 export default {
   title: "Components/Tab",

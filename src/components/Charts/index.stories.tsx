@@ -1,15 +1,15 @@
+import { fromUnixTime } from "date-fns";
 import { random } from "lodash";
 import React, { useMemo, useState } from "react";
+import getLocale from "../../util/getLocale";
 import Box from "../Box/Box";
+import { Text } from "../Text";
 import BarChartComponent from "./BarChart";
 import CandleChartComponent from "./CandleChart";
-import LineChartComponent from "./LineChart";
 import ChartCardComponent from "./ChartCard";
-import { ChartData, ChartEntry } from "./types";
-import { fromUnixTime } from "date-fns";
-import { Text } from "../Text";
-import getLocale from "../../util/getLocale";
 import { chartEntries, priceData, tokenData, tokenPriceData } from "./data";
+import LineChartComponent from "./LineChart";
+import { ChartData } from "./types";
 
 export default {
   title: "Components/Info Charts",
@@ -29,14 +29,14 @@ export const BarChart: React.FC = () => {
     day: "numeric",
     month: "short",
   });
-  
+
   const chartData: ChartData[] = useMemo(() => {
     return [...Array(10)].map(() => {
       return {
         time: fromUnixTime(random(startTimestamp, endTimestamp, false)),
         value: random(minValue, maxValue, true),
       };
-    })
+    });
   }, []);
 
   const [volumeHover, setVolumeHover] = useState<number | undefined>();
@@ -50,9 +50,7 @@ export const BarChart: React.FC = () => {
         setHoverValue={setVolumeHover}
         setHoverDate={setVolumeDateHover}
       />
-      {volumeHover && (
-        <Text>Volume: {volumeHover}</Text>
-      )}
+      {volumeHover && <Text>Volume: {volumeHover}</Text>}
     </Box>
   );
 };
@@ -69,14 +67,14 @@ export const LineChart: React.FC = () => {
     day: "numeric",
     month: "short",
   });
-  
+
   const chartData: ChartData[] = useMemo(() => {
     return [...Array(18)].map(() => {
       return {
         time: fromUnixTime(random(startTimestamp, endTimestamp, false)),
         value: random(minValue, maxValue, true),
       };
-    })
+    });
   }, []);
 
   const [volumeHover, setVolumeHover] = useState<number | undefined>();
@@ -90,15 +88,15 @@ export const LineChart: React.FC = () => {
         setHoverValue={setVolumeHover}
         setHoverDate={setVolumeDateHover}
       />
-      {volumeHover && (
-        <Text>Volume: {volumeHover}</Text>
-      )}
+      {volumeHover && <Text>Volume: {volumeHover}</Text>}
     </Box>
-  )
+  );
 };
 
 export const CandleChart: React.FC = () => {
-  const endTime = fromUnixTime(priceData[priceData.length - 1].time).toLocaleString();
+  const endTime = fromUnixTime(
+    priceData[priceData.length - 1].time
+  ).toLocaleString();
 
   const [value, setValue] = useState<number | undefined>();
   const [label, setLabel] = useState<string | undefined>();
@@ -111,11 +109,9 @@ export const CandleChart: React.FC = () => {
         setValue={setValue}
         setLabel={setLabel}
       />
-      {value && (
-        <Text>Value: {value}</Text>
-      )}
+      {value && <Text>Value: {value}</Text>}
     </Box>
-  )
+  );
 };
 
 export const ChartCard: React.FC = () => {
@@ -128,5 +124,5 @@ export const ChartCard: React.FC = () => {
         tokenPriceData={tokenPriceData}
       />
     </Box>
-  )
+  );
 };

@@ -1,9 +1,16 @@
-import React from 'react';
-import { Svg, SvgProps } from '../Svg';
+import React from "react";
+import { Svg, SvgProps } from "../Svg";
 
 const BarChartLoader: React.FC<SvgProps> = (props) => {
   return (
-    <Svg width="100%" height="100%" viewBox="0 0 50 25" preserveAspectRatio="none" opacity="0.1" {...props}>
+    <Svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 50 25"
+      preserveAspectRatio="none"
+      opacity="0.1"
+      {...props}
+    >
       <rect width="8%" fill="#1FC7D4">
         <animate
           attributeName="height"
@@ -174,10 +181,16 @@ const BarChartLoader: React.FC<SvgProps> = (props) => {
           keyTimes="0; 0.55; 1"
           repeatCount="indefinite"
         />
-        <animate attributeName="y" dur="0.9s" values="85%; 10%; 85%" keyTimes="0; 0.55; 1" repeatCount="indefinite" />
+        <animate
+          attributeName="y"
+          dur="0.9s"
+          values="85%; 10%; 85%"
+          keyTimes="0; 0.55; 1"
+          repeatCount="indefinite"
+        />
       </rect>
     </Svg>
-  )
-}
+  );
+};
 
 export default BarChartLoader;

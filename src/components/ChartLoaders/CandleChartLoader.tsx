@@ -1,9 +1,15 @@
-import React from 'react'
-import { Svg, SvgProps } from '../Svg'
+import React from "react";
+import { Svg, SvgProps } from "../Svg";
 
 const CandleChartLoader: React.FC<SvgProps> = (props) => {
   return (
-    <Svg width="100%" height="100%" viewBox="0 0 100 50" opacity="0.1" {...props}>
+    <Svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 100 50"
+      opacity="0.1"
+      {...props}
+    >
       <rect width="5%" fill="#31D0AA">
         <animate
           attributeName="height"
@@ -155,7 +161,7 @@ const CandleChartLoader: React.FC<SvgProps> = (props) => {
         />
       </rect>
     </Svg>
-  )
-}
+  );
+};
 
 export default CandleChartLoader;

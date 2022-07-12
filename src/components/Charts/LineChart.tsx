@@ -1,11 +1,7 @@
-import React, { useEffect, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import {
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Tooltip,
-  AreaChart,
-  Area,
+  Area, AreaChart, ResponsiveContainer, Tooltip, XAxis,
+  YAxis
 } from "recharts";
 import { useTheme } from "styled-components";
 import { formatAmount } from "../../util/formatInfoNumbers";
@@ -21,7 +17,12 @@ export type LineChartProps = {
 
 // Calls setHoverValue and setHoverDate when part of chart is hovered
 // Note: this NEEDs to be wrapped inside component and useEffect, if you plug it as is it will create big render problems (try and see console)
-const HoverUpdater = ({ locale, payload, setHoverValue, setHoverDate }: HoverUpdaterProps) => {
+const HoverUpdater = ({
+  locale,
+  payload,
+  setHoverValue,
+  setHoverDate,
+}: HoverUpdaterProps) => {
   useEffect(() => {
     setHoverValue(payload.value);
     setHoverDate(

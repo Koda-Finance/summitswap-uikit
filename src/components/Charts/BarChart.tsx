@@ -1,16 +1,16 @@
-import React, { useEffect, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import {
+  Bar,
   BarChart,
   ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  Bar,
 } from "recharts";
 import { useTheme } from "styled-components";
 import { formatAmount } from "../../util/formatInfoNumbers";
-import { BarChartLoader } from "../ChartLoaders";
 import getLocale from "../../util/getLocale";
+import { BarChartLoader } from "../ChartLoaders";
 import { HoverUpdaterProps } from "./types";
 
 export type LineChartProps = {
@@ -107,11 +107,7 @@ const Chart = ({ data, setHoverValue, setHoverDate }: LineChartProps) => {
         <Tooltip
           cursor={{ fill: theme.colors.textSubtle }}
           contentStyle={{ display: "none" }}
-          formatter={(
-            tooltipValue: any,
-            name: any,
-            props: any
-          ) => (
+          formatter={(tooltipValue: any, name: any, props: any) => (
             <HoverUpdater
               locale={getLocale()}
               payload={props.payload}
