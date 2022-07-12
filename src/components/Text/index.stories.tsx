@@ -1,9 +1,11 @@
 import React from "react";
-import Text from "./Text";
+import { Box } from "../Box";
+import PercentComponent from "./Percent";
+import TextComponent from "./Text";
 
 export default {
   title: "Components/Text",
-  component: Text,
+  component: TextComponent,
   argTypes: {
     bold: {
       name: "bold",
@@ -28,7 +30,10 @@ export default {
     color: {
       name: "color",
       table: {
-        type: { summary: "string", detail: "Color from the theme, or CSS color" },
+        type: {
+          summary: "string",
+          detail: "Color from the theme, or CSS color",
+        },
         defaultValue: { summary: "theme.colors.text" },
       },
       control: {
@@ -38,19 +43,38 @@ export default {
   },
 };
 
-export const Default: React.FC = () => {
+export const Text: React.FC = () => {
   return (
     <div>
-      <Text>Default</Text>
-      <Text bold>Bold text</Text>
-      <Text small>Small text</Text>
-      <Text fontSize="24px">Custom fontsize</Text>
-      <Text color="red">Custom color</Text>
-      <Text color="primary">Custom color from theme</Text>
-      <Text color="secondary" textTransform="uppercase">
+      <TextComponent>Default</TextComponent>
+      <TextComponent bold>Bold text</TextComponent>
+      <TextComponent small>Small text</TextComponent>
+      <TextComponent fontSize="24px">Custom fontsize</TextComponent>
+      <TextComponent color="red">Custom color</TextComponent>
+      <TextComponent color="primary">Custom color from theme</TextComponent>
+      <TextComponent color="secondary" textTransform="uppercase">
         with text transform
-      </Text>
-      <Text textAlign="center">center</Text>
+      </TextComponent>
+      <TextComponent textAlign="center">center</TextComponent>
+    </div>
+  );
+};
+
+export const Percent: React.FC = () => {
+  return (
+    <div>
+      <Box display="flex">
+        <TextComponent mr={20}>8.23 Percent:</TextComponent>
+        <PercentComponent value={8.23} />
+      </Box>
+      <Box display="flex">
+        <TextComponent mr={20}>0.00 Percent:</TextComponent>
+        <PercentComponent value={0.0} />
+      </Box>
+      <Box display="flex">
+        <TextComponent mr={20}>-8.12 Percent:</TextComponent>
+        <PercentComponent value={-8.12} />
+      </Box>
     </div>
   );
 };

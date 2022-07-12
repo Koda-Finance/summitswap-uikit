@@ -52,30 +52,30 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-jQbIHB gObKKb"
+        class="sc-GTWni KkQmy"
       >
         <div
           class="sc-dlfnbm sc-hKgILt isWJdv AmOVA"
         >
           <nav
-            class="sc-jUEnpm cIpAHH"
+            class="sc-fbNXWD fPLqdH"
           >
             <div
               class="sc-dlfnbm sc-hKgILt lkQHhn gPTDCk"
             >
               <div
-                class="sc-jONnTn eEhujx"
+                class="sc-bTvRPi etGXKF"
               >
                 <a
                   href="/"
                 >
                   <div
-                    class="sc-aemoO fRjIhG"
+                    class="sc-eLgOdN gNDgLQ"
                   />
                 </a>
               </div>
               <div
-                class="sc-dlfnbm sc-hKgILt sc-dacFzL isWJdv jszezi cyeKjN"
+                class="sc-dlfnbm sc-hKgILt sc-fvhGYg isWJdv jszezi gkxRku"
               >
                 <div>
                   <button
@@ -101,16 +101,16 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="sc-dlfnbm sc-hKgILt sc-hlTvYk kvYdsH clYVkQ gtwCAw"
+              class="sc-dlfnbm sc-hKgILt sc-kIeTtH kvYdsH clYVkQ eMgUjX"
             >
               <div
-                class="sc-hOqqkJ cIHxro"
+                class="sc-jUEnpm gdfnxH"
               >
                 <div
-                  class="sc-clsHhM ecNOin"
+                  class="sc-fWSCIC jEykQV"
                 >
                   <div
-                    class="sc-lcujXC dMQYQq"
+                    class="sc-fbkhIv crtQhF"
                   />
                   <div
                     class="sc-dlfnbm isWJdv"
@@ -119,10 +119,10 @@ it("renders correctly", () => {
                   </div>
                 </div>
                 <div
-                  class="sc-clsHhM ecNOin"
+                  class="sc-fWSCIC jEykQV"
                 >
                   <div
-                    class="sc-gGmIRh bgJSbB"
+                    class="sc-GqfZa ezqjQI"
                   />
                   <div
                     class="sc-dlfnbm isWJdv"
@@ -132,7 +132,7 @@ it("renders correctly", () => {
                 </div>
               </div>
               <div
-                class="sc-dtwoBo caMwig"
+                class="sc-jQbIHB Mglzv"
               >
                 <a
                   href="https://discord.com/invite/FBgEmJmHuc"
@@ -222,10 +222,10 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="sc-dlfnbm sc-kIeTtH iaMnCl iqnefu"
+              class="sc-dlfnbm sc-dacFzL iaMnCl ncagP"
             >
               <div
-                class="sc-jeGSBP cqDNah"
+                class="sc-higXBA jlYzJc"
                 role="button"
               >
                 <a
@@ -245,7 +245,7 @@ it("renders correctly", () => {
                     />
                   </svg>
                   <div
-                    class="sc-iNqMTl wITZZ"
+                    class="sc-nFpLZ cOnacQ"
                   >
                     Trade
                   </div>
@@ -255,16 +255,16 @@ it("renders correctly", () => {
           </nav>
         </div>
         <div
-          class="sc-fvhGYg cODaFj"
+          class="sc-gsxnyZ fMEmcT"
         >
           <div
-            class="sc-dwfUOf hdrHYs"
+            class="sc-aemoO hOFLqA"
           >
             <div
-              class="sc-TmcTc bNkKQh"
+              class="sc-jONnTn fuIxVb"
             />
             <div
-              class="sc-laRPJI bxUQdQ"
+              class="sc-eJMQSu mFKBJ"
             >
               <div
                 class="sc-dlfnbm sc-hKgILt CdpQa hhgqpc"
@@ -301,10 +301,10 @@ it("renders correctly", () => {
               style="position: relative; height: 100%;"
             >
               <div
-                class="sc-higXBA etpIHR"
+                class="sc-gGmIRh jOspUu"
               >
                 <div
-                  class="sc-jeGSBP bovYlQ"
+                  class="sc-higXBA fDUVHB"
                   role="button"
                 >
                   <a
@@ -324,7 +324,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <div
-                      class="sc-iNqMTl wITZZ"
+                      class="sc-nFpLZ cOnacQ"
                     >
                       Trade
                     </div>
@@ -332,16 +332,16 @@ it("renders correctly", () => {
                 </div>
               </div>
               <div
-                class="sc-fbkhIv gDKUjH"
+                class="sc-dwfUOf jZXpiu"
               >
                 <div
-                  class="sc-GqfZa dnmkEH"
+                  class="sc-TmcTc jKUTCF"
                 >
                   <div
-                    class="sc-clsHhM ecNOin"
+                    class="sc-fWSCIC jEykQV"
                   >
                     <div
-                      class="sc-lcujXC dMQYQq"
+                      class="sc-fbkhIv crtQhF"
                     />
                     <div
                       class="sc-dlfnbm isWJdv"
@@ -350,10 +350,10 @@ it("renders correctly", () => {
                     </div>
                   </div>
                   <div
-                    class="sc-clsHhM ecNOin"
+                    class="sc-fWSCIC jEykQV"
                   >
                     <div
-                      class="sc-gGmIRh bgJSbB"
+                      class="sc-GqfZa ezqjQI"
                     />
                     <div
                       class="sc-dlfnbm isWJdv"
@@ -363,7 +363,7 @@ it("renders correctly", () => {
                   </div>
                 </div>
                 <div
-                  class="sc-fWSCIC hoqYvZ"
+                  class="sc-jHVexB beDJRR"
                 >
                   <a
                     href="https://discord.com/invite/FBgEmJmHuc"
@@ -455,7 +455,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-fbNXWD btoRHg"
+            class="sc-bXDlPE fBuGhG"
           >
             body
           </div>
