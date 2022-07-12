@@ -4,11 +4,12 @@ import Box from "../Box/Box";
 import BarChartComponent from "./BarChart";
 import CandleChartComponent from "./CandleChart";
 import LineChartComponent from "./LineChart";
-import { ChartData } from "./types";
+import ChartCardComponent from "./ChartCard";
+import { ChartData, ChartEntry } from "./types";
 import { fromUnixTime } from "date-fns";
 import { Text } from "../Text";
 import getLocale from "../../util/getLocale";
-import { priceData } from "./data";
+import { chartEntries, priceData, tokenData, tokenPriceData } from "./data";
 
 export default {
   title: "Components/Info Charts",
@@ -94,7 +95,7 @@ export const LineChart: React.FC = () => {
       )}
     </Box>
   )
-}
+};
 
 export const CandleChart: React.FC = () => {
   const endTime = fromUnixTime(priceData[priceData.length - 1].time).toLocaleString();
@@ -115,4 +116,17 @@ export const CandleChart: React.FC = () => {
       )}
     </Box>
   )
-}
+};
+
+export const ChartCard: React.FC = () => {
+  return (
+    <Box>
+      <ChartCardComponent
+        variant="token"
+        chartData={chartEntries}
+        tokenData={tokenData}
+        tokenPriceData={tokenPriceData}
+      />
+    </Box>
+  )
+};
