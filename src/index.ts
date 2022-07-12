@@ -11,7 +11,7 @@ export * from "./components/Dropdown";
 export * from "./components/FallingBunnies";
 export * from "./components/Heading";
 export * from "./components/Image";
-export * from "./components/InfoCharts";
+export * from "./components/Charts";
 export * from "./components/Input";
 export * from "./components/Layouts";
 export * from "./components/Radio";
