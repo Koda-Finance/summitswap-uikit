@@ -7,3 +7,7 @@ export interface TextProps extends SpaceProps, TypographyProps {
   small?: boolean;
   textTransform?: "uppercase" | "lowercase" | "capitalize";
 }
+
+export interface PercentProps extends TextProps {
+  value: number | undefined
+}
