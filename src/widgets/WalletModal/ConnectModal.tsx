@@ -20,25 +20,20 @@ const HelpLink = styled(Link)`
   color: ${({ theme }) => theme.colors.sidebarColor};
 `;
 
-const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
-  <Modal
-    title="Connect to a wallet"
-    bodyPadding="0 30px 30px 30px"
-    hideSeparator
-    showWalletBack
-    onDismiss={onDismiss}
-  >
-    {config.map((entry, index) => (
-      !window.ethereum && entry.redirectUrl ? (
-        <a key={entry.title} href={entry.redirectUrl} target="_blank" rel="noopener noreferrer">
-          <WalletCard
-            login={login}
-            walletConfig={entry}
-            onDismiss={onDismiss}
-            mb={index < config.length - 1 ? "8px" : "0"}
-          />
-        </a>
-      ) : (
+const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
+  const walletsToShow = window.ethereum?.isTrust
+    ? config.filter((wallet) => wallet.title !== "WalletConnect")
+    : config;
+
+  return (
+    <Modal
+      title="Connect to a wallet"
+      bodyPadding="0 30px 30px 30px"
+      hideSeparator
+      showWalletBack
+      onDismiss={onDismiss}
+    >
+      {walletsToShow.map((entry, index) => (
         <WalletCard
           key={entry.title}
           login={login}
@@ -46,13 +41,13 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
           onDismiss={onDismiss}
           mb={index < config.length - 1 ? "8px" : "0"}
         />
-      )
-    ))}
-    <HelpLink href="https://t.me/kodakingofdogaltschat" external>
-      <HelpIcon color="sidebarColor" fontSize="16px" mr="6px" />
-      Need help connecting? Contact us
-    </HelpLink>
-  </Modal>
-);
+      ))}
+      <HelpLink href="https://t.me/kodakingofdogaltschat" external>
+        <HelpIcon color="sidebarColor" fontSize="16px" mr="6px" />
+        Need help connecting? Contact us
+      </HelpLink>
+    </Modal>
+  );
+};
 
 export default ConnectModal;

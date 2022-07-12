@@ -1,6 +1,6 @@
 {
   "name": "@koda-finance/summitswap-uikit",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Set of UI components for summitswap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -76,6 +76,7 @@
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
+    "react-device-detect": "^2.2.2",
     "react-transition-group": "^4.4.1",
     "styled-system": "^5.1.5"
   }
