@@ -1,11 +1,15 @@
 interface Window {
   ethereum?: {
-    isMetaMask?: true
-    on?: (...args: any[]) => void
-    removeListener?: (...args: any[]) => void
-  }
-  web3?: any
-  BinanceChain?: BinanceChain
+    isMetaMask?: true;
+    isOpera?: true;
+    isCoinbaseWallet?: true;
+    isTrust?: true;
+    providers?: any[];
+    request?: (...args: any[]) => Promise<void>;
+  };
+  BinanceChain?: {
+    bnbSign?: (address: string, message: string) => Promise<{ publicKey: string; signature: string }>;
+  };
 }
 
 interface BinanceChain {
