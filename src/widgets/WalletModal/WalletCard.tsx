@@ -2,8 +2,9 @@ import React from "react";
 import Button from "../../components/Button/Button";
 import Flex from "../../components/Box/Flex";
 import Text from "../../components/Text/Text";
-import { connectorLocalStorageKey } from "./config";
+import { connectorLocalStorageKey, walletConnectConfig, walletLocalStorageKey } from "./config";
 import { Login, Config } from "./types";
+import { isDesktop } from "react-device-detect";
 
 interface Props {
   walletConfig: Config;
@@ -20,10 +21,22 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       height='40px'
       borderBottom='1px solid #0d1b24'
       onClick={() => {
-        if (!window.ethereum && walletConfig.redirectUrl) return;
-        login(walletConfig.connectorId);
-        window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
-        onDismiss();
+        // TW point to WC on desktop
+        if (title === "Trust Wallet" && walletConnectConfig && isDesktop) {
+          login(walletConnectConfig.connectorId);
+          localStorage?.setItem(walletLocalStorageKey, walletConnectConfig.title);
+          localStorage?.setItem(connectorLocalStorageKey, walletConnectConfig.connectorId);
+          onDismiss();
+          return;
+        }
+        if (!window.ethereum && walletConfig.redirectUrl) {
+          window.open(walletConfig.redirectUrl, "_blank", "noopener noreferrer");
+        } else {
+          login(walletConfig.connectorId);
+          localStorage?.setItem(walletLocalStorageKey, walletConfig.title);
+          localStorage?.setItem(connectorLocalStorageKey, walletConfig.connectorId);
+          onDismiss();
+        }
       }}
       justifyContent="space-between"
       alignItems='center'
