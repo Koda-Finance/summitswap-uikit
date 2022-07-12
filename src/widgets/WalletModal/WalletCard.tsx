@@ -22,7 +22,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       borderBottom='1px solid #0d1b24'
       onClick={() => {
         // TW point to WC on desktop
-        if (title === "Trust Wallet" && walletConnectConfig && isDesktop) {
+        if (title === "TrustWallet" && walletConnectConfig && isDesktop) {
           login(walletConnectConfig.connectorId);
           localStorage?.setItem(walletLocalStorageKey, walletConnectConfig.title);
           localStorage?.setItem(connectorLocalStorageKey, walletConnectConfig.connectorId);
