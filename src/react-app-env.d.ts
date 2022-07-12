@@ -6,15 +6,16 @@ interface Window {
     isTrust?: true;
     providers?: any[];
     request?: (...args: any[]) => Promise<void>;
+    on?: (...args: any[]) => void;
+    removeListener?: (...args: any[]) => void;
   };
-  BinanceChain?: {
-    bnbSign?: (address: string, message: string) => Promise<{ publicKey: string; signature: string }>;
-  };
+  web3?: any;
+  BinanceChain?: BinanceChain;
 }
 
 interface BinanceChain {
-  send: unknown
-  enable: () => Promise<string[]>
-  on?: (method: string, listener: (...args: any[]) => void) => void
-  removeListener?: (method: string, listener: (...args: any[]) => void) => void
+  send: unknown;
+  enable: () => Promise<string[]>;
+  on?: (method: string, listener: (...args: any[]) => void) => void;
+  removeListener?: (method: string, listener: (...args: any[]) => void) => void;
 }
