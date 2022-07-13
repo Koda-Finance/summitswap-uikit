@@ -5,13 +5,7 @@ import Flex from "../../../components/Box/Flex";
 import { LogoTextIcon } from "../../..";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
-
-const NetworkLogo = styled.img`
-  object-fit: cover;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-`;
+import { NetworkLogo } from "./Shared";
 
 interface Props {
   account?: string;
