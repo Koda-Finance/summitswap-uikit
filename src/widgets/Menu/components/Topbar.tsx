@@ -61,7 +61,7 @@ const Topbar: React.FC<Props> = ({
             {showConnectButton && (
               <Flex style={{ gap: 7 }}>
                 <UserBlock account={account} login={login} logout={logout} />
-                <NetworkLogo src={networkLogo} />
+                {networkLogo && <NetworkLogo src={networkLogo} alt="Network" />}
               </Flex>
             )}
             {!open ? (

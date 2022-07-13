@@ -12,7 +12,7 @@ interface Props {
   login: Login;
   logout: () => void;
   showConnectButton: boolean;
-  networkLogo: string;
+  networkLogo?: string;
 }
 
 const PanelHeader: React.FC<Props> = ({
@@ -54,7 +54,7 @@ const PanelHeader: React.FC<Props> = ({
               CONNECT
             </Button>
           )}
-          <NetworkLogo src={networkLogo} alt="Network" />
+          {networkLogo && <NetworkLogo src={networkLogo} alt="Network" />}
         </Flex>
       )}
     </StyledContainer>

@@ -49,7 +49,7 @@ export interface PanelProps {
   langs?: LangType[];
   setLang?: (lang: LangType) => void;
   links: Array<MenuEntry>;
-  networkLogo: string;
+  networkLogo?: string;
   showConnectButton: boolean;
 }
 
