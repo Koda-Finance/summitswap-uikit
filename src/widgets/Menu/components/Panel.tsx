@@ -67,6 +67,7 @@ const Panel: React.FC<Props> = (props) => {
     login,
     logout,
     showConnectButton,
+    networkLogo
   } = props;
 
   return (
@@ -77,6 +78,7 @@ const Panel: React.FC<Props> = (props) => {
         login={login}
         logout={logout}
         showConnectButton={showConnectButton}
+        networkLogo={networkLogo}
       />
       <div style={{ position: "relative", height: "100%" }}>
         <PanelBody {...props} />

@@ -61,6 +61,7 @@ const Menu: React.FC<NavProps> = ({
   profile,
   showConnectButton,
   children,
+  networkLogo,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;
@@ -103,6 +104,9 @@ const Menu: React.FC<NavProps> = ({
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
+  // networkLogo =
+  //   "https://raw.githubusercontent.com/sushiswap/logos/main/token/avax.jpg";
+
   return (
     <Wrapper>
       {isMobile && (
@@ -126,6 +130,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           showConnectButton={showConnectButton}
+          networkLogo={networkLogo}
         />
       )}
       <BodyWrapper>
@@ -147,6 +152,7 @@ const Menu: React.FC<NavProps> = ({
           pushNav={setIsPushed}
           links={links}
           showConnectButton={showConnectButton}
+          networkLogo={networkLogo}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}

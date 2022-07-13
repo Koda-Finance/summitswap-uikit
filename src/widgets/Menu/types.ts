@@ -49,6 +49,8 @@ export interface PanelProps {
   langs?: LangType[];
   setLang?: (lang: LangType) => void;
   links: Array<MenuEntry>;
+  networkLogo: string;
+  showConnectButton: boolean;
 }
 
 export interface NavProps extends PanelProps {
@@ -56,5 +58,4 @@ export interface NavProps extends PanelProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
-  showConnectButton: boolean;
 }

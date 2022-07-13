@@ -49,6 +49,7 @@ const Topbar: React.FC<Props> = ({
   pushNav,
   links,
   showConnectButton,
+  networkLogo
 }) => {
   return (
     <Flex flexDirection="column">
