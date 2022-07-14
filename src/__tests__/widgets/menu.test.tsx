@@ -52,30 +52,30 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-fvhGYg bJuYos"
+        class="sc-bBrOnJ elTHnE"
       >
         <div
           class="sc-dlfnbm sc-hKgILt isWJdv AmOVA"
         >
           <nav
-            class="sc-jQbIHB fsqjTY"
+            class="sc-dOSReg bySLli"
           >
             <div
               class="sc-dlfnbm sc-hKgILt lkQHhn gPTDCk"
             >
               <div
-                class="sc-hlTvYk eSGHlu"
+                class="sc-citwmv dQGjAU"
               >
                 <a
                   href="/"
                 >
                   <div
-                    class="sc-jONnTn iLcmEc"
+                    class="sc-cBNfnY ejDjTh"
                   />
                 </a>
               </div>
               <div
-                class="sc-dlfnbm sc-hKgILt sc-jUEnpm isWJdv jszezi euBA-di"
+                class="sc-dlfnbm sc-hKgILt sc-jNMdTA isWJdv jszezi fDkOnr"
               >
                 <div
                   class="sc-dlfnbm sc-hKgILt isWJdv dRpfYw"
@@ -91,7 +91,7 @@ it("renders correctly", () => {
                   </div>
                 </div>
                 <svg
-                  class="sc-eCssSg gQJWre"
+                  class="sc-gKsewC deuDVi"
                   color="sidebarColor"
                   cursor="pointer"
                   height="40px"
@@ -106,16 +106,16 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="sc-dlfnbm sc-hKgILt sc-eLgOdN kvYdsH clYVkQ ccLDar"
+              class="sc-dlfnbm sc-hKgILt sc-jcVebW kvYdsH clYVkQ euxpqv"
             >
               <div
-                class="sc-dtwoBo hgzpHn"
+                class="sc-eggNIi gUcEEN"
               >
                 <div
-                  class="sc-fbkhIv dEoFjG"
+                  class="sc-ezrdKe lfhbA-d"
                 >
                   <div
-                    class="sc-gGmIRh eriUIL"
+                    class="sc-iJuUWI CyMWo"
                   />
                   <div
                     class="sc-dlfnbm isWJdv"
@@ -124,10 +124,10 @@ it("renders correctly", () => {
                   </div>
                 </div>
                 <div
-                  class="sc-fbkhIv dEoFjG"
+                  class="sc-ezrdKe lfhbA-d"
                 >
                   <div
-                    class="sc-clsHhM kihLS"
+                    class="sc-giIncl hoYbZl"
                   />
                   <div
                     class="sc-dlfnbm isWJdv"
@@ -137,13 +137,13 @@ it("renders correctly", () => {
                 </div>
               </div>
               <div
-                class="sc-dacFzL edNHtj"
+                class="sc-cTkwdZ iIperI"
               >
                 <a
                   href="https://discord.com/invite/FBgEmJmHuc"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -160,7 +160,7 @@ it("renders correctly", () => {
                   href="https://t.me/kodakingofdogaltschat"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -177,7 +177,7 @@ it("renders correctly", () => {
                   href="https://www.facebook.com/KodaCryptocurrency"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -194,7 +194,7 @@ it("renders correctly", () => {
                   href="https://twitter.com/CoinKoda"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -211,7 +211,7 @@ it("renders correctly", () => {
                   href="https://www.instagram.com/kodacryptocurrency"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -227,17 +227,17 @@ it("renders correctly", () => {
               </div>
             </div>
             <div
-              class="sc-dlfnbm sc-hOqqkJ iaMnCl KxUdv"
+              class="sc-dlfnbm sc-iBaPrD iaMnCl blwWnx"
             >
               <div
-                class="sc-eJMQSu bppCVv"
+                class="sc-idOhPF igLOHb"
                 role="button"
               >
                 <a
                   href="/farms"
                 >
                   <svg
-                    class="sc-eCssSg cnreMN"
+                    class="sc-gKsewC hujCXp"
                     color="primary"
                     viewBox="0 0 24 24"
                     width="24px"
@@ -250,7 +250,7 @@ it("renders correctly", () => {
                     />
                   </svg>
                   <div
-                    class="sc-jeGSBP ejMjBj"
+                    class="sc-bkzZxe kLnIOi"
                   >
                     Trade
                   </div>
@@ -260,16 +260,16 @@ it("renders correctly", () => {
           </nav>
         </div>
         <div
-          class="sc-fbNXWD eeOlVz"
+          class="sc-cOajty ewZPaU"
         >
           <div
-            class="sc-TmcTc iPDvSU"
+            class="sc-jJEJSO bLrDhu"
           >
             <div
-              class="sc-jHVexB qFCqP"
+              class="sc-hiSbYr IInSz"
             />
             <div
-              class="sc-iNqMTl cbnUUr"
+              class="sc-fFubgz dhqVSG"
             >
               <div
                 class="sc-dlfnbm sc-hKgILt CdpQa hhgqpc"
@@ -278,7 +278,7 @@ it("renders correctly", () => {
                   href="/"
                 >
                   <svg
-                    class="sc-eCssSg fQrLiT"
+                    class="sc-gKsewC ccyZOX"
                     color="primary"
                     height="60px"
                     width="100%"
@@ -307,17 +307,17 @@ it("renders correctly", () => {
               style="position: relative; height: 100%;"
             >
               <div
-                class="sc-ehSCib iPwywC"
+                class="sc-dmlrTW fMVIIU"
               >
                 <div
-                  class="sc-eJMQSu cARNgO"
+                  class="sc-idOhPF xoQmu"
                   role="button"
                 >
                   <a
                     href="/farms"
                   >
                     <svg
-                      class="sc-eCssSg cnreMN"
+                      class="sc-gKsewC hujCXp"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="24px"
@@ -330,7 +330,7 @@ it("renders correctly", () => {
                       />
                     </svg>
                     <div
-                      class="sc-jeGSBP ejMjBj"
+                      class="sc-bkzZxe kLnIOi"
                     >
                       Trade
                     </div>
@@ -338,16 +338,16 @@ it("renders correctly", () => {
                 </div>
               </div>
               <div
-                class="sc-GqfZa cVJmtQ"
+                class="sc-bYEvPH iNDaAv"
               >
                 <div
-                  class="sc-fWSCIC heCfTf"
+                  class="sc-kLgntA lnYNkr"
                 >
                   <div
-                    class="sc-fbkhIv dEoFjG"
+                    class="sc-ezrdKe lfhbA-d"
                   >
                     <div
-                      class="sc-gGmIRh eriUIL"
+                      class="sc-iJuUWI CyMWo"
                     />
                     <div
                       class="sc-dlfnbm isWJdv"
@@ -356,10 +356,10 @@ it("renders correctly", () => {
                     </div>
                   </div>
                   <div
-                    class="sc-fbkhIv dEoFjG"
+                    class="sc-ezrdKe lfhbA-d"
                   >
                     <div
-                      class="sc-clsHhM kihLS"
+                      class="sc-giIncl hoYbZl"
                     />
                     <div
                       class="sc-dlfnbm isWJdv"
@@ -369,13 +369,13 @@ it("renders correctly", () => {
                   </div>
                 </div>
                 <div
-                  class="sc-dwfUOf eCSHbr"
+                  class="sc-iktFzd gDMECI"
                 >
                   <a
                     href="https://discord.com/invite/FBgEmJmHuc"
                   >
                     <svg
-                      class="sc-eCssSg fQrLiT"
+                      class="sc-gKsewC ccyZOX"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -392,7 +392,7 @@ it("renders correctly", () => {
                     href="https://t.me/kodakingofdogaltschat"
                   >
                     <svg
-                      class="sc-eCssSg fQrLiT"
+                      class="sc-gKsewC ccyZOX"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -409,7 +409,7 @@ it("renders correctly", () => {
                     href="https://www.facebook.com/KodaCryptocurrency"
                   >
                     <svg
-                      class="sc-eCssSg fQrLiT"
+                      class="sc-gKsewC ccyZOX"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -426,7 +426,7 @@ it("renders correctly", () => {
                     href="https://twitter.com/CoinKoda"
                   >
                     <svg
-                      class="sc-eCssSg fQrLiT"
+                      class="sc-gKsewC ccyZOX"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -443,7 +443,7 @@ it("renders correctly", () => {
                     href="https://www.instagram.com/kodacryptocurrency"
                   >
                     <svg
-                      class="sc-eCssSg fQrLiT"
+                      class="sc-gKsewC ccyZOX"
                       color="primary"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -461,7 +461,7 @@ it("renders correctly", () => {
             </div>
           </div>
           <div
-            class="sc-GTWni hHihkq"
+            class="sc-AzgDb cnTVuX"
           >
             body
           </div>
