@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../../components/Button/Button";
 import Flex from "../../../components/Box/Flex";
-import { LogoTextIcon } from "../../..";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
 import { NetworkLogo } from "./Shared";
+import { LogoTextIcon } from "../../../components/Svg";
 
 interface Props {
   account?: string;

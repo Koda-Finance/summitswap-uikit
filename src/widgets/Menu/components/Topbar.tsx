@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import Box from "../../../components/Box/Box";
-import { SvgProps } from "../../../components/Svg";
+import { CloseIcon, SvgProps } from "../../../components/Svg";
 import * as IconModule from "../icons";
 import Logo from "../components/Logo";
 import UserBlock from "../components/UserBlock";
@@ -16,7 +16,6 @@ import {
 } from "../icons";
 import { Login } from "../../WalletModal/types";
 import { MENU_HEIGHT, MENU_HEIGHT_INCREASED } from "../config";
-import { CloseIcon } from "../../..";
 import CashState from "./CashState";
 import LangSelector from "./LangSelector";
 import { MenuEntry, LinkLabel } from "../components/MenuEntry";
