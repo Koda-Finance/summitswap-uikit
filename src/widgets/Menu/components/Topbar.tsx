@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import Box from "../../../components/Box/Box";
-import { SvgProps } from "../../../components/Svg";
+import { CloseIcon, SvgProps } from "../../../components/Svg";
 import * as IconModule from "../icons";
 import Logo from "../components/Logo";
 import UserBlock from "../components/UserBlock";
@@ -16,13 +16,13 @@ import {
 } from "../icons";
 import { Login } from "../../WalletModal/types";
 import { MENU_HEIGHT, MENU_HEIGHT_INCREASED } from "../config";
-import { CloseIcon } from "../../..";
 import CashState from "./CashState";
 import LangSelector from "./LangSelector";
 import { MenuEntry, LinkLabel } from "../components/MenuEntry";
 import MenuLink from "../components/MenuLink";
 import Accordion from "./Accordion";
 import { NavProps, PushedProps } from "../types";
+import { NetworkLogo } from "./Shared";
 
 interface Props extends NavProps, PushedProps {
   open: any;
@@ -49,6 +49,7 @@ const Topbar: React.FC<Props> = ({
   pushNav,
   links,
   showConnectButton,
+  networkLogo,
 }) => {
   return (
     <Flex flexDirection="column">
@@ -57,7 +58,10 @@ const Topbar: React.FC<Props> = ({
           <Logo />
           <ConnectAction justifyContent="flex-end" alignItems="center">
             {showConnectButton && (
-              <UserBlock account={account} login={login} logout={logout} />
+              <Flex style={{ gap: 7 }}>
+                <UserBlock account={account} login={login} logout={logout} />
+                {networkLogo && <NetworkLogo src={networkLogo} alt="Network" />}
+              </Flex>
             )}
             {!open ? (
               <HamburgerIcon
@@ -89,7 +93,7 @@ const Topbar: React.FC<Props> = ({
           alignItems="center"
         >
           <SettingsEntry>
-            <CashState coinPriceUsd={kodaPriceUsd} token={"KODA"}/>
+            <CashState coinPriceUsd={kodaPriceUsd} token={"KODA"} />
             <CashState coinPriceUsd={kapexPriceUsd} token={"KAPEX"} />
             {currentLang && langs?.length && setLang ? (
               <LangSelector
@@ -100,11 +104,21 @@ const Topbar: React.FC<Props> = ({
             ) : null}
           </SettingsEntry>
           <SocialEntry>
-            <a href="https://discord.com/invite/FBgEmJmHuc"><DiscordIcon /></a>
-            <a href="https://t.me/kodakingofdogaltschat"><TelegramIcon /></a>
-            <a href="https://www.facebook.com/KodaCryptocurrency"><FacebookIcon /></a>
-            <a href="https://twitter.com/CoinKoda"><TwitterIcon /></a>
-            <a href="https://www.instagram.com/kodacryptocurrency"><InstagramIcon /></a>
+            <a href="https://discord.com/invite/FBgEmJmHuc">
+              <DiscordIcon />
+            </a>
+            <a href="https://t.me/kodakingofdogaltschat">
+              <TelegramIcon />
+            </a>
+            <a href="https://www.facebook.com/KodaCryptocurrency">
+              <FacebookIcon />
+            </a>
+            <a href="https://twitter.com/CoinKoda">
+              <TwitterIcon />
+            </a>
+            <a href="https://www.instagram.com/kodacryptocurrency">
+              <InstagramIcon />
+            </a>
           </SocialEntry>
         </SettingSocial>
         <EntryScroll minWidth="85%" padding="20px 0px">

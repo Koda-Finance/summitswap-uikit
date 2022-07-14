@@ -2,18 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../../components/Button/Button";
 import Flex from "../../../components/Box/Flex";
-import { LogoTextIcon } from "../../..";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
+import { NetworkLogo } from "./Shared";
+import { LogoTextIcon } from "../../../components/Svg";
 
 interface Props {
   account?: string;
   login: Login;
   logout: () => void;
   showConnectButton: boolean;
+  networkLogo?: string;
 }
 
-const PanelHeader: React.FC<Props> = ({ account, login, logout, showConnectButton }) => {
+const PanelHeader: React.FC<Props> = ({
+  account,
+  login,
+  logout,
+  showConnectButton,
+  networkLogo,
+}) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
     login,
     logout,
@@ -30,7 +38,7 @@ const PanelHeader: React.FC<Props> = ({ account, login, logout, showConnectButto
         </a>
       </Flex>
       {showConnectButton && (
-        <Flex justifyContent="center">
+        <Flex justifyContent="center" style={{ gap: 10 }}>
           {account ? (
             <Button
               scale="sm"
@@ -46,6 +54,7 @@ const PanelHeader: React.FC<Props> = ({ account, login, logout, showConnectButto
               CONNECT
             </Button>
           )}
+          {networkLogo && <NetworkLogo src={networkLogo} alt="Network" />}
         </Flex>
       )}
     </StyledContainer>

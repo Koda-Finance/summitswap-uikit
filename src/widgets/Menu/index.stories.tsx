@@ -33,6 +33,7 @@ const useProps = () => {
     kapexPriceUsd: 0,
     links,
     profile: null,
+    showConnectButton: true,
   });
 
   useEffect(() => {
@@ -51,6 +52,7 @@ const useProps = () => {
         kapexPriceUsd: 0.0000004759,
         links,
         profile: null,
+        showConnectButton: true,
       });
     }, 2000);
     return () => {
